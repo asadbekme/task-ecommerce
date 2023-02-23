@@ -1,0 +1,41 @@
+@import "../assets/scss/variables";
+
+.hero {
+  background-color: $hero-bg;
+
+  &__content {
+    padding-top: 43px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 22px 0;
+  }
+
+  &__subtitle,
+  &__description {
+    color: $black-color;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: $primary-color;
+    color: $white-color;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 40px;
+
+    &:hover {
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
+}
