@@ -1,4 +1,4 @@
-import { Helmet } from "../components";
+import { Helmet, Services } from "../components";
 import { Container, Row, Col } from "reactstrap";
 import { heroImg } from "../assets/images";
 import "../styles/home.scss";
@@ -38,6 +38,9 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      <Services />
+      
     </Helmet>
   );
 };

@@ -1,4 +1,4 @@
-const serviceData = [
+export const servicesData = [
   {
     icon: "ri-truck-line",
     title: "Free Shipping",
@@ -25,4 +25,3 @@ const serviceData = [
   },
 ];
 
-export default serviceData;
