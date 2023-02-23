@@ -1,0 +1,76 @@
+// * Basic mixins
+@mixin flex($dr: row, $fw: nowrap, $jc: flex-start, $ai: flex-start) {
+  display: flex;
+  flex-direction: $dr;
+  flex-wrap: $fw;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($property, $duration, $timing-function) {
+  transition: $property $duration $timing-function;
+}
+
+@mixin container {
+  max-width: 1206px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 30px;
+}
+
+// * Responsive media mixins
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == xxl) {
+    @media screen and (max-width: 1700px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xl) {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xs) {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xxs) {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == ss) {
+    @media screen and (max-width: 340px) {
+      @content;
+    }
+  }
+}

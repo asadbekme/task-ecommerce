@@ -1,0 +1,89 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+
+.header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+
+  &__wrapper {
+    @include flex(row, nowrap, space-between, center);
+  }
+
+  &__logo {
+    @include center();
+    column-gap: 8px;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+
+  &__menu {
+    @include center();
+    column-gap: 2.7rem;
+    margin-bottom: 0;
+  }
+
+  .nav__item {
+    a {
+      color: $primary-color;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  .nav__active {
+    font-weight: 700 !important;
+  }
+
+  &__icons {
+    @include center();
+    column-gap: 1.2rem;
+
+    i {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  .heart__icon,
+  .cart__icon {
+    position: relative;
+  }
+
+  .badge {
+    position: absolute;
+    top: 25%;
+    right: -8%;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 50px;
+    @include center();
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 10;
+  }
+
+  &__mobile--menu {
+    font-size: 1.3rem;
+    color: $primary-color;
+    display: none;
+  }
+}

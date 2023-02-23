@@ -1,0 +1,13 @@
+// * import
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+
+// * global styles
+img {
+  width: 100%;
+}
+
+section {
+  padding: 60px 0;
+}
