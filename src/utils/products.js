@@ -136,7 +136,7 @@ const products = [{
   {
     id: "07",
     productName: "Sakarias Armchair",
-    imgUrl: singleSofa04,
+    imgUrl: armChair03,
     category: "chair",
     price: 99,
     shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",

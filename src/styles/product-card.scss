@@ -1,0 +1,43 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.product {
+  &__card {
+    cursor: pointer;
+  }
+
+  &__info {
+    padding: 20px;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  &__category {
+    font-size: 0.9rem;
+  }
+
+  &__item {
+    @include flex(row, nowrap, space-between, center);
+  }
+
+  &__price {
+    color: $primary-color;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__add {
+    i {
+      font-size: 1.2rem;
+      color: $white-color;
+      padding: 5px;
+      background-color: $primary-color;
+      border-radius: 50px;
+    }
+  }
+}
