@@ -3,11 +3,15 @@
 
 .product {
   &__card {
+    background: $white-color;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
     cursor: pointer;
   }
 
   &__info {
-    padding: 20px;
+    padding: 10px 4px;
   }
 
   &__name {

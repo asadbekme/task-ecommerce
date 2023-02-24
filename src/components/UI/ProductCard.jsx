@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
-    <Col lg="3" md="4">
+    <Col lg="3" md="4" className="mb-4">
       <div className="product__card">
         <div className="product__img">
           <motion.img
