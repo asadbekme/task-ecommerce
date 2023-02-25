@@ -24,8 +24,7 @@ import {
   wireless03
 } from '../assets/images';
 
-const products = [
-  {
+const products = [{
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: doubleSofa01,
@@ -41,7 +40,7 @@ const products = [
   },
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Rivet Brand Bigelow Modern ",
     imgUrl: doubleSofa02,
     category: "sofa",
     price: 253,
@@ -79,7 +78,7 @@ const products = [
   },
   {
     id: "24",
-    productName: "Modern Arm Sofa",
+    productName: "Modern Brand Arm Sofa",
     imgUrl: doubleSofa02,
     category: "sofa",
     price: 173,

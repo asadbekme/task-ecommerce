@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import { Helmet, Services } from "../components";
+import { Helmet, Services, ProductList, Clock } from "../components";
 import { motion } from "framer-motion";
-import { heroImg } from "../assets/images";
+import { counterTimerImg, heroImg } from "../assets/images";
 import "../styles/home.scss";
-import ProductList from "../components/UI/ProductList";
 import products from "../utils/products";
 
 const Home = () => {
@@ -79,6 +78,34 @@ const Home = () => {
               <h2 className="best__sales--title title">Best Sales</h2>
             </Col>
             <ProductList data={bestSalesProducts} />
+          </Row>
+        </Container>
+      </section>
+
+      <section className="timer__count">
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <div className="timer__count--content">
+                <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
+                <h3 className="text-white fs-5 mb-3">Quality Armchair</h3>
+              </div>
+              <Clock />
+              <motion.button
+                whileTap={{ scale: 1.2 }}
+                className="timer__count--btn"
+              >
+                <Link to="/shop">Visit store</Link>
+              </motion.button>
+            </Col>
+
+            <Col lg="6" md="6" className="text-end">
+              <img
+                className="timer__count--img"
+                src={counterTimerImg}
+                alt="Counter timer"
+              />
+            </Col>
           </Row>
         </Container>
       </section>

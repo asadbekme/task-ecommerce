@@ -39,3 +39,28 @@
     }
   }
 }
+
+// * Timer count
+.timer__count {
+  background: $primary-color;
+  height: 300px;
+
+  &--content {
+  }
+
+  &--btn {
+    background: $white-color;
+    padding: 10px 17px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: $primary-color;
+    border: none;
+    font-weight: 600;
+  }
+
+  &--img {
+    height: 70% !important;
+    width: 70% !important;
+    object-fit: contain;
+  }
+}
