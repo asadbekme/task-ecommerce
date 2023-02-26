@@ -1,7 +1,7 @@
 const Helmet = (props) => {
-  document.title = 'Ecommerce - ' + props.title;
+  document.title = "Ecommerce - " + props.title;
 
-  return <div className="w-100">{props.children}</div>;
+  return <main className="w-100">{props.children}</main>;
 };
 
 export default Helmet;

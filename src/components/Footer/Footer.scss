@@ -1,0 +1,56 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+
+.footer {
+  padding-top: 60px;
+  background: $primary-color;
+
+  &__title {
+    color: $white-color;
+  }
+
+  &__text {
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.735);
+  }
+
+  &__links {
+    &--title {
+      color: $white-color;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    &--item {
+      background: transparent !important;
+
+      a {
+        color: rgba(255, 255, 255, 0.735);
+      }
+    }
+  }
+
+  &__contact {
+    li {
+      color: $white-color;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $white-color;
+    }
+  }
+
+  &__copyright {
+    color: rgba(255, 255, 255, 0.735);
+    border-top: 1px solid $white-color;
+    font-size: 1rem;
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+  }
+}

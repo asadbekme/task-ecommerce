@@ -24,7 +24,8 @@ import {
   wireless03
 } from '../assets/images';
 
-const products = [{
+const products = [
+  {
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: doubleSofa01,
@@ -77,7 +78,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "24",
+    id: "04",
     productName: "Modern Brand Arm Sofa",
     imgUrl: doubleSofa02,
     category: "sofa",
@@ -96,7 +97,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "04",
+    id: "05",
     productName: "Fllufy Sheep Sofa",
     imgUrl: singleSofa01,
     category: "sofa",
@@ -115,7 +116,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "05",
+    id: "06",
     productName: "Faux Velvet Sofa",
     imgUrl: singleSofa02,
     category: "sofa",
@@ -134,7 +135,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "25",
+    id: "07",
     productName: "Fllufy Sheep Sofa",
     imgUrl: singleSofa04,
     category: "sofa",
@@ -153,7 +154,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "06",
+    id: "08",
     productName: "Fllufy Sheep Sofa",
     imgUrl: singleSofa03,
     category: "sofa",
@@ -172,7 +173,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "07",
+    id: "09",
     productName: "Sakarias Armchair",
     imgUrl: armChair03,
     category: "chair",
@@ -191,7 +192,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "08",
+    id: "10",
     productName: "Baltsar Chair",
     imgUrl: armChair01,
     category: "chair",
@@ -210,7 +211,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "09",
+    id: "11",
     productName: "Helmar Chair",
     imgUrl: armChair02,
     category: "chair",
@@ -229,7 +230,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "10",
+    id: "12",
     productName: "Sakarias Armchair",
     imgUrl: armChair03,
     category: "chair",
@@ -248,7 +249,7 @@ const products = [{
     avgRating: 4.7,
   },
   {
-    id: "11",
+    id: "13",
     productName: "Apple iPhone 12 Pro",
     imgUrl: phone01,
     category: "mobile",
@@ -267,7 +268,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "12",
+    id: "14",
     productName: "Apple iPhone 12 Max",
     imgUrl: phone02,
     category: "mobile",
@@ -286,7 +287,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "13",
+    id: "15",
     productName: "Realme 8",
     imgUrl: phone03,
     category: "mobile",
@@ -305,7 +306,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "14",
+    id: "16",
     productName: "One Plus Nord",
     imgUrl: phone04,
     category: "mobile",
@@ -324,7 +325,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "15",
+    id: "17",
     productName: "Apple iPhone 13 Pro",
     imgUrl: phone05,
     category: "mobile",
@@ -343,7 +344,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "16",
+    id: "18",
     productName: "Samsung Galaxy S22",
     imgUrl: phone06,
     category: "mobile",
@@ -362,7 +363,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "17",
+    id: "19",
     productName: "Rolex Watch",
     imgUrl: watch01,
     category: "watch",
@@ -381,7 +382,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "18",
+    id: "20",
     productName: "Timex Easy Reader Watch",
     imgUrl: watch02,
     category: "watch",
@@ -400,7 +401,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "19",
+    id: "21",
     productName: "Rolex Watch",
     imgUrl: watch03,
     category: "watch",
@@ -419,7 +420,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "20",
+    id: "22",
     productName: "Apple Watch",
     imgUrl: watch04,
     category: "watch",
@@ -438,7 +439,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "21",
+    id: "23",
     productName: "Beat Studio Wireless",
     imgUrl: wireless01,
     category: "wireless",
@@ -457,7 +458,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "22",
+    id: "24",
     productName: "Beat EP Headphones",
     imgUrl: wireless03,
     category: "wireless",
@@ -476,7 +477,7 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "22",
+    id: "25",
     productName: "Beat Sony Headphones",
     imgUrl: wireless02,
     category: "wireless",

@@ -9,7 +9,7 @@ const Services = () => {
       <Container>
         <Row>
           {servicesData.map((item, idx) => (
-            <Col lg="3" md="4">
+            <Col lg="3" md="4" key={idx}>
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 className="services__item"
