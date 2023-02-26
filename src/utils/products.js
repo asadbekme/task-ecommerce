@@ -458,8 +458,8 @@ const products = [{
   },
   {
     id: "22",
-    productName: "Beat Sony Headphones",
-    imgUrl: wireless02,
+    productName: "Beat EP Headphones",
+    imgUrl: wireless03,
     category: "wireless",
     price: 199,
     shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -476,9 +476,9 @@ const products = [{
     avgRating: 4.8,
   },
   {
-    id: "23",
-    productName: "Beat EP Headphones",
-    imgUrl: wireless03,
+    id: "22",
+    productName: "Beat Sony Headphones",
+    imgUrl: wireless02,
     category: "wireless",
     price: 199,
     shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",

@@ -10,6 +10,8 @@ import products from "../utils/products";
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
+  const [mobileProducts, setMobileProducts] = useState([]);
+  const [wirelessProducts, setWirelessProducts] = useState([]);
   const year = new Date().getFullYear();
 
   useEffect(() => {
@@ -21,8 +23,18 @@ const Home = () => {
       (product) => product.category === "sofa"
     );
 
+    const filteredMobileProducts = products.filter(
+      (product) => product.category === "mobile"
+    );
+
+    const filteredWirelessProducts = products.filter(
+      (product) => product.category === "wireless"
+    );
+
     setBestSalesProducts(filteredBestSalesProducts);
     setTrendingProducts(filteredTrendingProducts);
+    setMobileProducts(filteredMobileProducts);
+    setWirelessProducts(filteredWirelessProducts);
   }, []);
 
   return (
@@ -106,6 +118,18 @@ const Home = () => {
                 alt="Counter timer"
               />
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="new__arrivals">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-4">
+              <h2 className="new__arrivals--title title">New Arrivals</h2>
+            </Col>
+            <ProductList data={mobileProducts} />
+            <ProductList data={wirelessProducts} />
           </Row>
         </Container>
       </section>
