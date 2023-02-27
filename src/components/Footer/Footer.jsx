@@ -93,7 +93,7 @@ const Footer = () => {
 
           <Col lg="12">
             <p className="footer__copyright">
-              Copyright {year} developed by Asadbek Rakhimov. All rights
+              Copyright © {year} developed by Asadbek Rakhimov. All rights
               reserved.
             </p>
           </Col>

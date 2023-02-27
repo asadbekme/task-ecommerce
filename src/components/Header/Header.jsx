@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
@@ -6,8 +7,32 @@ import { navLinks } from "../../utils/constants";
 import { motion } from "framer-motion";
 
 const Header = () => {
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+
+  const headerStickyFunc = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("header__sticky");
+      } else {
+        headerRef.current.classList.remove("header__sticky");
+      }
+    });
+  };
+
+  useEffect(() => {
+    headerStickyFunc();
+
+    return () => window.removeEventListener("scroll", headerStickyFunc);
+  });
+
+  const menuToggle = () => menuRef.current.classList.toggle("menu__active");
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <Row>
           <div className="header__wrapper">
@@ -16,7 +41,11 @@ const Header = () => {
               <span>Ecommerce</span>
             </div>
 
-            <div className="header__navigation">
+            <div
+              className="header__navigation"
+              ref={menuRef}
+              onClick={menuToggle}
+            >
               <ul className="header__menu">
                 {navLinks.map((item, idx) => (
                   <li className="nav__item" key={idx}>
@@ -49,12 +78,11 @@ const Header = () => {
                   alt="User icon"
                 />
               </span>
-            </div>
-
-            <div className="header__mobile--menu">
-              <span>
-                <i className="ri-menu-line"></i>
-              </span>
+              <div className="header__mobile--menu">
+                <span onClick={menuToggle}>
+                  <i className="ri-menu-line"></i>
+                </span>
+              </div>
             </div>
           </div>
         </Row>
