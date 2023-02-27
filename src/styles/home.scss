@@ -1,17 +1,34 @@
 @import "../assets/scss/variables";
+@import "../assets/scss/mixins";
 
 .hero {
   background-color: $hero-bg;
 
   &__content {
-    padding-top: 43px;
+    padding-top: 40px;
+    @include responsive(md) {
+      padding-top: 20px;
+    }
+    @include responsive(xs) {
+      padding-top: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
     color: $primary-color;
     font-size: 2.5rem;
     font-weight: 600;
-    margin: 22px 0;
+    margin: 20px 0;
+    @include responsive(md) {
+      font-size: 2rem;
+      margin: 15px 0;
+    }
+
+    @include responsive(sm) {
+      font-size: 1.6rem;
+      margin: 12px 0;
+    }
   }
 
   &__subtitle,
@@ -19,6 +36,14 @@
     color: $black-color;
     line-height: 28px;
     font-weight: 500;
+    @include responsive(md) {
+      line-height: 23px;
+      font-size: 1rem;
+    }
+
+    @include responsive(sm) {
+      font-size: 0.9rem;
+    }
   }
 
   &__btn {
@@ -30,7 +55,11 @@
     color: $white-color;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 35px;
+    @include responsive(md) {
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
 
     &:hover {
       a {
@@ -46,6 +75,27 @@
   height: 300px;
 
   &--content {
+    @include responsive(md) {
+      text-align: center;
+    }
+
+    h4 {
+      @include responsive(md) {
+        font-size: 0.9rem !important;
+      }
+    }
+
+    h4 {
+      @include responsive(md) {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  &--button {
+    @include responsive(md) {
+      text-align: center;
+    }
   }
 
   &--btn {
@@ -56,6 +106,12 @@
     color: $primary-color;
     border: none;
     font-weight: 600;
+  }
+
+  &--image {
+    @include responsive(md) {
+      display: none;
+    }
   }
 
   &--img {

@@ -9,6 +9,14 @@
     column-gap: 0.7rem;
     border-radius: 5px;
     cursor: pointer;
+    @include responsive(md) {
+      padding: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    @include responsive(xs) {
+      padding: 18px;
+    }
   }
 
   &__icon {
@@ -19,19 +27,29 @@
       border-radius: 50px;
       color: $white-color;
       font-weight: 400 !important;
+      @include responsive(md) {
+        font-size: 1.8rem;
+        padding: 5px;
+      }
+      @include responsive(sm) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   &__title {
     color: $primary-color;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
+    @include responsive(md) {
+      font-size: 1rem;
+    }
   }
 
   &__subtitle {
     color: $black-color;
-    font-size: 0.8rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 500;
     margin-top: 5px;
   }
 }

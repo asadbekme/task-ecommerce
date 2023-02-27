@@ -19,6 +19,9 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-top: 15px;
+    @include responsive(md) {
+      font-size: 1.1rem;
+    }
   }
 
   &__category {
@@ -33,6 +36,9 @@
     color: $primary-color;
     font-size: 1.3rem;
     font-weight: 500;
+    @include responsive(md) {
+      font-size: 1.2rem;
+    }
   }
 
   &__add {
@@ -42,6 +48,12 @@
       padding: 5px;
       background-color: $primary-color;
       border-radius: 50px;
+      @include responsive(md) {
+        font-size: 1.1rem;
+      }
+      @include responsive(sm) {
+        font-size: 1rem;
+      }
     }
   }
 }

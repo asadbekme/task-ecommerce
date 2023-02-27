@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="4" md="6" className="mb-4">
             <div className="footer__info">
               <h4 className="footer__title">Ecommerce</h4>
               <p className="footer__text mt-4">
@@ -19,7 +19,7 @@ const Footer = () => {
               </p>
             </div>
           </Col>
-          <Col lg="3">
+          <Col lg="3" md="4" className="mb-4">
             <div className="footer__links">
               <h4 className="footer__links--title">Top Categories</h4>
               <ListGroup>
@@ -41,7 +41,7 @@ const Footer = () => {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="2">
+          <Col lg="2" md="3" className="mb-4">
             <div className="footer__links">
               <h4 className="footer__links--title">Useful links</h4>
               <ListGroup>
@@ -63,7 +63,7 @@ const Footer = () => {
               </ListGroup>
             </div>
           </Col>
-          <Col lg="3">
+          <Col lg="3" md="4">
             <div className="footer__links">
               <h4 className="footer__links--title">Contact</h4>
               <ListGroup className="footer__contact">

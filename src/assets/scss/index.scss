@@ -10,9 +10,15 @@ img {
 
 section {
   padding: 60px 0;
+  @include responsive(sm) {
+    padding: 40px 0;
+  }
 }
 
 .title {
   color: $primary-color;
   font-weight: 600;
+  @include responsive(md) {
+    font-size: 1.7rem;
+  }
 }

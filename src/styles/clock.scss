@@ -1,0 +1,23 @@
+@import "../assets/scss/mixins";
+
+.clock {
+  &__wrapper {
+    @include responsive(md) {
+      justify-content: center;
+    }
+  }
+
+  &__data {
+    h1 {
+      @include responsive(md) {
+        font-size: 1.1rem !important;
+      }
+    }
+
+    h5 {
+      @include responsive(md) {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}
