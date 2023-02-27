@@ -11,7 +11,7 @@
 
   &__text {
     line-height: 30px;
-    color: rgba(255, 255, 255, 0.735);
+    color: rgba(255, 255, 255, 0.92);
   }
 
   &__links {
@@ -25,14 +25,14 @@
       background: transparent !important;
 
       a {
-        color: rgba(255, 255, 255, 0.735);
+        color: rgba(255, 255, 255, 0.92);
       }
     }
   }
 
   &__contact {
     li {
-      color: $white-color;
+      color: rgba(255, 255, 255, 0.92);
     }
 
     span {
@@ -41,12 +41,12 @@
 
     p {
       font-size: 0.9rem;
-      color: $white-color;
+      color: rgba(255, 255, 255, 0.92);
     }
   }
 
   &__copyright {
-    color: rgba(255, 255, 255, 0.735);
+    color: rgba(255, 255, 255, 0.92);
     border-top: 1px solid $white-color;
     font-size: 1rem;
     margin-top: 50px;

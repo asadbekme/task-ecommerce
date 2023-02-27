@@ -5,8 +5,11 @@ import "./Header.scss";
 import { logo, userIcon } from "../../assets/images";
 import { navLinks } from "../../utils/constants";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const { totalQuantity } = useSelector((state) => state.cart);
+
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -69,7 +72,7 @@ const Header = () => {
               </span>
               <span className="cart__icon">
                 <i className="ri-shopping-bag-line"></i>
-                <span className="badge">2</span>
+                <span className="badge">{totalQuantity}</span>
               </span>
               <span className="user__icon">
                 <motion.img

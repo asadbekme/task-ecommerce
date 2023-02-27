@@ -4,15 +4,14 @@ import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
-
-import { addItem } from "../../slice/cart";
+import { addProduct } from "../../slice/cart";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const addToCart = () => {
     dispatch(
-      addItem({
+      addProduct({
         id: product.id,
         productName: product.productName,
         price: product.price,

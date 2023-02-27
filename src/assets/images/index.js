@@ -1,6 +1,7 @@
 export { default as logo } from './logo.png';
 export { default as userIcon } from './user-icon.png';
 export { default as heroImg } from './hero-img.png';
+export { default as commonSectionBg } from './common-section-bg.jpg';
 export { default as armChair01 } from './arm-chair-01.jpg';
 export { default as armChair02 } from './arm-chair-02.jpg';
 export { default as armChair03 } from './arm-chair-03.jpg';
