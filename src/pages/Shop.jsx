@@ -55,7 +55,7 @@ const Shop = () => {
   };
 
   return (
-    <Helmet title="shop">
+    <Helmet title="Shop">
       <CommonSection title={"Products"} />
 
       <section className="shop">

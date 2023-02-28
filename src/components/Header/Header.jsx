@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Container, Row } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 import { logo, userIcon } from "../../assets/images";
 import { navLinks } from "../../utils/constants";
@@ -39,10 +39,12 @@ const Header = () => {
       <Container>
         <Row>
           <div className="header__wrapper">
-            <div className="header__logo">
-              <img src={logo} alt="Logo" />
-              <span>Ecommerce</span>
-            </div>
+            <Link to="/">
+              <div className="header__logo">
+                <img src={logo} alt="Logo" />
+                <span>Ecommerce</span>
+              </div>
+            </Link>
 
             <div
               className="header__navigation"
