@@ -1,0 +1,43 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.shop {
+  &__filter {
+    &--widget select {
+      padding: 8px 20px;
+      border: 1px solid $primary-color;
+      background: $primary-color;
+      color: $white-color;
+      border-radius: 5px;
+      cursor: pointer;
+      &:focus {
+        outline: none !important;
+      }
+
+      option {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &__search {
+    width: 100%;
+    @include flex(row, nowrap, space-between, center);
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+    padding-right: 10px;
+    padding-left: 2px;
+    cursor: pointer;
+
+    &--input {
+      width: 100%;
+      padding: 8px 10px;
+      outline: none;
+      border: none;
+    }
+
+    span {
+      color: $primary-color;
+    }
+  }
+}
