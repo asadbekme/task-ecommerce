@@ -1,0 +1,28 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.table {
+  th,
+  td {
+    color: $black-color;
+  }
+
+  tbody {
+    td {
+      img {
+        width: 80px !important;
+        height: 80px !important;
+        object-fit: cover;
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 500;
+        &:hover {
+          color: crimson;
+        }
+      }
+    }
+  }
+}

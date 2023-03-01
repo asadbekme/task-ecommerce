@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Container, Row } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
 import { logo, userIcon } from "../../assets/images";
 import { navLinks } from "../../utils/constants";
@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const { totalQuantity } = useSelector((state) => state.cart);
-
+  const navigate = useNavigate();
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -33,6 +33,10 @@ const Header = () => {
   });
 
   const menuToggle = () => menuRef.current.classList.toggle("menu__active");
+
+  const navigateToCart = () => {
+    navigate("/cart");
+  };
 
   return (
     <header className="header" ref={headerRef}>
@@ -72,7 +76,7 @@ const Header = () => {
                 <i className="ri-heart-line"></i>
                 <span className="badge">2</span>
               </span>
-              <span className="cart__icon">
+              <span className="cart__icon" onClick={navigateToCart}>
                 <i className="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>

@@ -22,3 +22,15 @@ section {
     font-size: 1.7rem;
   }
 }
+
+.btn__buy {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  background: $primary-color;
+  color: $white-color;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}

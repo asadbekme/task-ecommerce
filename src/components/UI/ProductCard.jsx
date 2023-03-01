@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
         id: product.id,
         productName: product.productName,
         price: product.price,
-        image: product.imgUrl,
+        imgUrl: product.imgUrl,
       })
     );
 
