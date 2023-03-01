@@ -3,6 +3,12 @@
 
 .shop {
   &__filter {
+    &--widget {
+      @include responsive(sm) {
+        margin-bottom: 30px;
+      }
+    }
+
     &--widget select {
       padding: 8px 20px;
       border: 1px solid $primary-color;
@@ -12,6 +18,11 @@
       cursor: pointer;
       &:focus {
         outline: none !important;
+      }
+
+      @include responsive(sm) {
+        padding: 7px 20px;
+        font-size: 0.8rem;
       }
 
       option {

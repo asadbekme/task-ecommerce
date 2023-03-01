@@ -1,16 +1,26 @@
+import { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import { CommonSection, Helmet } from "../components";
+import { CommonSection, Helmet, ProductList } from "../components";
 import products from "../utils/products";
 import "../styles/product-details.scss";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../slice/cart";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const [tab, setTab] = useState("description");
+  const [rating, setRating] = useState(null);
+  const [reviewData, setReviewData] = useState({
+    userName: "",
+    text: "",
+  });
   const { id } = useParams();
+  const dispatch = useDispatch();
   const product = products.find((product) => product.id === id);
   const {
+    category,
     imgUrl,
     productName,
     price,
@@ -19,6 +29,31 @@ const ProductDetails = () => {
     shortDesc,
     description,
   } = product;
+
+  const relatedProducts = products.filter(
+    (product) => product.category === category
+  );
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const reviewObj = { ...reviewData, rating: rating };
+    console.log(reviewObj);
+    toast.success("Review submitted.");
+  };
+
+  const addToCart = () => {
+    dispatch(
+      addProduct({
+        id,
+        image: imgUrl,
+        productName,
+        price,
+      })
+    );
+
+    toast.success("Product added successfully.");
+  };
 
   return (
     <Helmet title={productName}>
@@ -36,19 +71,19 @@ const ProductDetails = () => {
                 <div className="product__rating">
                   <div>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-half-s-fill"></i>
+                      <i className="ri-star-half-s-fill"></i>
                     </span>
                   </div>
                   <p className="product__rating--text">
@@ -56,11 +91,15 @@ const ProductDetails = () => {
                   </p>
                 </div>
 
-                <span className="product__price">${price}</span>
+                <div className="d-flex align-items-center gap-5">
+                  <span className="product__price">${price}</span>
+                  <span>Category: {category.toLowerCase()}</span>
+                </div>
                 <p className="product__shortDesc">{shortDesc}</p>
                 <motion.button
                   whileTap={{ scale: 1.2 }}
                   className="product__btn"
+                  onClick={addToCart}
                 >
                   Add to cart
                 </motion.button>
@@ -108,27 +147,52 @@ const ProductDetails = () => {
 
                     <div className="reviews__form">
                       <h4>Leave your exprience</h4>
-                      <form action="./server.js">
+                      <form onSubmit={submitHandler}>
                         <div className="form__group">
-                          <input type="text" placeholder="Enter name" />
+                          <input
+                            type="text"
+                            placeholder="Enter name"
+                            onChange={(e) =>
+                              setReviewData({
+                                ...reviewData,
+                                userName: e.target.value,
+                              })
+                            }
+                            required
+                          />
                         </div>
 
                         <div className="form__group form__group--stars">
-                          <span>
+                          <motion.span
+                            whileTap={{ scale: 1.2 }}
+                            onClick={() => setRating(1)}
+                          >
                             1<i className="ri-star-s-fill"></i>
-                          </span>
-                          <span>
+                          </motion.span>
+                          <motion.span
+                            whileTap={{ scale: 1.2 }}
+                            onClick={() => setRating(2)}
+                          >
                             2<i className="ri-star-s-fill"></i>
-                          </span>
-                          <span>
+                          </motion.span>
+                          <motion.span
+                            whileTap={{ scale: 1.2 }}
+                            onClick={() => setRating(3)}
+                          >
                             3<i className="ri-star-s-fill"></i>
-                          </span>
-                          <span>
+                          </motion.span>
+                          <motion.span
+                            whileTap={{ scale: 1.2 }}
+                            onClick={() => setRating(4)}
+                          >
                             4<i className="ri-star-s-fill"></i>
-                          </span>
-                          <span>
+                          </motion.span>
+                          <motion.span
+                            whileTap={{ scale: 1.2 }}
+                            onClick={() => setRating(5)}
+                          >
                             5<i className="ri-star-s-fill"></i>
-                          </span>
+                          </motion.span>
                         </div>
 
                         <div className="form__group">
@@ -136,18 +200,35 @@ const ProductDetails = () => {
                             rows={4}
                             type="text"
                             placeholder="Review message"
+                            onChange={(e) =>
+                              setReviewData({
+                                ...reviewData,
+                                text: e.target.value,
+                              })
+                            }
+                            required
                           />
                         </div>
 
-                        <button type="submit" className="form__btn">
+                        <motion.button
+                          whileTap={{ scale: 1.2 }}
+                          type="submit"
+                          className="form__btn"
+                        >
                           Submit
-                        </button>
+                        </motion.button>
                       </form>
                     </div>
                   </div>
                 )}
               </div>
             </Col>
+
+            <Col lg="12" className="my-5">
+              <h2 className="related__title">You might also like</h2>
+            </Col>
+
+            <ProductList data={relatedProducts} />
           </Row>
         </Container>
       </section>

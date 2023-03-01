@@ -9,6 +9,10 @@ const Shop = () => {
 
   const handleFilter = (e) => {
     const filterValue = e.target.value;
+    if (filterValue === "all") {
+      setProductsData(products);
+    }
+
     if (filterValue === "sofa") {
       const filteredProducts = products.filter(
         (product) => product.category === "sofa"
@@ -61,10 +65,11 @@ const Shop = () => {
       <section className="shop">
         <Container>
           <Row>
-            <Col lg="3" md="3">
+            <Col lg="3" md="6">
               <div className="shop__filter--widget">
                 <select onChange={handleFilter}>
                   <option>Filter by category</option>
+                  <option value="all">All</option>
                   <option value="sofa">Sofa</option>
                   <option value="mobile">Mobile</option>
                   <option value="chair">Chair</option>
@@ -73,7 +78,7 @@ const Shop = () => {
                 </select>
               </div>
             </Col>
-            <Col lg="3" md="3">
+            <Col lg="3" md="6" className="text-end">
               <div className="shop__filter--widget">
                 <select>
                   <option>Sort by</option>
@@ -82,7 +87,7 @@ const Shop = () => {
                 </select>
               </div>
             </Col>
-            <Col lg="6" md="6">
+            <Col lg="6" md="12">
               <div className="shop__search">
                 <input
                   type="text"
