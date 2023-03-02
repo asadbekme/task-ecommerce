@@ -1,0 +1,50 @@
+@import "../assets/scss/variables";
+
+.signup {
+  &__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    background: $primary-color;
+    color: white;
+    border-radius: 5px;
+    padding: 35px 50px;
+    width: 100%;
+    &--input {
+      width: 100%;
+      border: 1px solid $card-bg-02;
+      border-radius: 5px;
+      padding: 7px 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--inputFile {
+      color: $white-color;
+    }
+  }
+
+  &__btn {
+    padding: 7px 20px;
+    color: $primary-color;
+    border: none;
+    font-weight: 500;
+    outline: none;
+    border-radius: 5px;
+    background: $white-color;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  &__description {
+    margin-top: 15px;
+    a {
+      color: $white-color;
+    }
+  }
+}
