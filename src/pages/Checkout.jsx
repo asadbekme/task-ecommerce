@@ -2,8 +2,11 @@ import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Helmet, CommonSection } from "../components";
 import FormInput from "../components/UI/FormInput";
 import "../styles/checkout.scss";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
+  const { totalAmount, totalQuantity } = useSelector((state) => state.cart);
+
   return (
     <Helmet title="Checkout">
       <CommonSection title="Checkout" />
@@ -28,10 +31,10 @@ const Checkout = () => {
             <Col lg="4">
               <div className="checkout__cart">
                 <h6>
-                  Total Quantity: <span>0</span>
+                  Total Quantity: <span>{totalQuantity} products</span>
                 </h6>
                 <h6>
-                  Subtotal: <span>$120</span>
+                  Subtotal: <span>${totalAmount}</span>
                 </h6>
                 <h6>
                   <span>
@@ -41,7 +44,7 @@ const Checkout = () => {
                   <span>$0</span>
                 </h6>
                 <h4>
-                  Total Cost: <span>$120</span>
+                  Total Cost: <span>${totalAmount}</span>
                 </h4>
                 <button className="checkout__btn auth__btn">
                   Place in order
