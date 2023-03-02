@@ -1,0 +1,53 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.checkout {
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__form {
+    width: 100%;
+    &--input {
+      width: 100%;
+      border: 1px solid $card-bg-02;
+      border-radius: 5px;
+      padding: 8px 20px;
+    }
+  }
+
+  &__cart {
+    background: $primary-color;
+    color: $white-color;
+    border-radius: 5px;
+    padding: 20px;
+
+    h6,
+    h4 {
+      @include flex(row, nowrap, space-between, center);
+    }
+
+    h6 {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      border-top: 1px solid $small-text-color;
+      padding-top: 20px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: $white-color;
+    color: $primary-color;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

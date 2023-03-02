@@ -24,8 +24,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <Col lg="3" md="4" className="mb-4">
-      <Link to={`/shop/${product.id}`}>
-        <div className="product__card">
+      <div className="product__card">
+        <Link to={`/shop/${product.id}`}>
           <div className="product__img">
             <motion.img
               whileHover={{ scale: 0.9 }}
@@ -33,22 +33,24 @@ const ProductCard = ({ product }) => {
               alt="Chair"
             />
           </div>
-          <div className="product__info">
+        </Link>
+        <div className="product__info">
+          <Link to={`/shop/${product.id}`}>
             <h4 className="product__name">{product.productName}</h4>
-            <span className="product__category">{product.category}</span>
-          </div>
-          <div className="product__item">
-            <span className="product__price">${product.price}</span>
-            <motion.span
-              whileTap={{ scale: 1.2 }}
-              className="product__add"
-              onClick={addToCart}
-            >
-              <i className="ri-add-line"></i>
-            </motion.span>
-          </div>
+          </Link>
+          <span className="product__category">{product.category}</span>
         </div>
-      </Link>
+        <div className="product__item">
+          <span className="product__price">${product.price}</span>
+          <motion.span
+            whileTap={{ scale: 1.2 }}
+            className="product__add"
+            onClick={addToCart}
+          >
+            <i className="ri-add-line"></i>
+          </motion.span>
+        </div>
+      </div>
     </Col>
   );
 };

@@ -7,7 +7,6 @@
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
-    cursor: pointer;
   }
 
   &__info {
@@ -48,6 +47,7 @@
       padding: 5px;
       background-color: $primary-color;
       border-radius: 50px;
+      cursor: pointer;
       @include responsive(md) {
         font-size: 1.1rem;
       }

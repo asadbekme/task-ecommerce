@@ -1,9 +1,9 @@
-import "../styles/cart.scss";
-import { Helmet, CommonSection } from "../components";
 import { Container, Row, Col } from "reactstrap";
-import { motion } from "framer-motion";
+import { Helmet, CommonSection } from "../components";
 import { useSelector, useDispatch } from "react-redux";
+import "../styles/cart.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { deleteProduct } from "../slice/cart";
 
 const Cart = () => {
@@ -14,7 +14,7 @@ const Cart = () => {
     <Helmet title="Cart">
       <CommonSection title={"Shopping Cart"} />
 
-      <section>
+      <section className="cart">
         <Container>
           <Row>
             <Col lg="9">
@@ -43,32 +43,33 @@ const Cart = () => {
                         <td>{product.productName}</td>
                         <td>${product.price}</td>
                         <td>{product.quantity} px</td>
-                        <td onClick={() => dispatch(deleteProduct(product.id))}>
-                          <motion.i
-                            whileTap={{ scale: 1.2 }}
-                            className="ri-delete-bin-line"
-                          ></motion.i>
-                        </td>
+                        <motion.td
+                          whileTap={{ scale: 1.1 }}
+                          onClick={() => dispatch(deleteProduct(product.id))}
+                        >
+                          <i className="ri-delete-bin-line"></i>
+                        </motion.td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               )}
             </Col>
+
             <Col lg="3">
               <div className="d-flex align-items-center justify-content-between">
                 <h6>Subtotal</h6>
                 <span className="fs-4 fw-bold">${totalAmount}</span>
               </div>
               <p className="mt-4 text-black">
-                taxes and shipping will calculate in checkout
+                Taxes and shipping will calculate in checkout
               </p>
               <div>
                 <button className="btn__buy w-100">
                   <Link to="/checkout">Checkout</Link>
                 </button>
                 <button className="btn__buy w-100">
-                  <Link to="/shop">Countinue Shopping</Link>
+                  <Link to="/shop">Continue Shopping</Link>
                 </button>
               </div>
             </Col>

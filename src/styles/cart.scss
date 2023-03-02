@@ -2,11 +2,6 @@
 @import "../assets/scss/mixins";
 
 .table {
-  th,
-  td {
-    color: $black-color;
-  }
-
   tbody {
     td {
       img {
@@ -16,13 +11,17 @@
       }
 
       i {
-        cursor: pointer;
         font-size: 1.2rem;
         font-weight: 500;
+        cursor: pointer;
         &:hover {
           color: crimson;
         }
       }
     }
   }
+}
+
+.btn__buy a:hover {
+  color: inherit;
 }
