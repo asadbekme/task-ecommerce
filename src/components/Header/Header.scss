@@ -79,6 +79,7 @@
     img {
       width: 32px;
       height: 32px;
+      border-radius: 50%;
       cursor: pointer;
     }
   }
@@ -110,12 +111,38 @@
     z-index: 10;
   }
 
-  .user__icon {
-    img {
-      @include responsive(sm) {
-        width: 1.5rem;
-        height: 1.5rem;
+  .profile {
+    &__icon {
+      position: relative;
+      z-index: 9;
+      img {
+        @include responsive(sm) {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       }
+    }
+
+    &__actions {
+      position: absolute;
+      top: 97%;
+      left: 0;
+      width: 100px;
+      z-index: 10;
+      padding: 10px;
+      @include flex(column, nowrap, flex-start, center);
+      background: $card-bg-01;
+      line-height: 30px;
+      display: none;
+      cursor: pointer;
+    }
+
+    &__action {
+      @include flex(column, nowrap, center, center);
+    }
+
+    &__show {
+      display: block;
     }
   }
 

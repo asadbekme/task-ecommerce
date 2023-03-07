@@ -6,12 +6,29 @@ import { logo, userIcon } from "../../assets/images";
 import { navLinks } from "../../utils/constants";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import useAuth from "../../hooks/useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const { totalQuantity } = useSelector((state) => state.cart);
   const navigate = useNavigate();
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+  const profileShowRef = useRef(null);
+  const { currentUser } = useAuth();
+
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success("Logged out");
+        navigate("/home");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   const headerStickyFunc = () => {
     window.addEventListener("scroll", () => {
@@ -36,6 +53,10 @@ const Header = () => {
 
   const navigateToCart = () => {
     navigate("/cart");
+  };
+
+  const toggleProfileActions = () => {
+    profileShowRef.current.classList.toggle("profile__show");
   };
 
   return (
@@ -80,13 +101,29 @@ const Header = () => {
                 <i className="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
-              <span className="user__icon">
+              <div className="profile__icon">
                 <motion.img
                   whileTap={{ scale: 1.2 }}
-                  src={userIcon}
+                  src={currentUser ? currentUser.photoURL : userIcon}
                   alt="User icon"
+                  onClick={toggleProfileActions}
                 />
-              </span>
+
+                <div
+                  className="profile__actions"
+                  ref={profileShowRef}
+                  onClick={toggleProfileActions}
+                >
+                  {currentUser ? (
+                    <span onClick={logout}>Logout</span>
+                  ) : (
+                    <div className="profile__action">
+                      <Link to={"/signup"}>Signup</Link>
+                      <Link to={"/login"}>Login</Link>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="header__mobile--menu">
                 <span onClick={menuToggle}>
                   <i className="ri-menu-line"></i>
