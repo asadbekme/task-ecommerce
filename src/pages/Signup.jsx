@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "../components";
+import { Helmet, Loader } from "../components";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -72,9 +72,7 @@ const Signup = () => {
         <Container>
           <Row>
             {loading ? (
-              <Col lg="12" className="text-center">
-                <h5 className="fw-bold">Loading...</h5>
-              </Col>
+              <Loader />
             ) : (
               <Col lg="6" className="mx-auto text-center">
                 <h3 className="signup__title">Signup</h3>

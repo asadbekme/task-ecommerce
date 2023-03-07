@@ -6,3 +6,4 @@ export { default as Services } from './Services/Services';
 export { default as ProductList } from './UI/ProductList';
 export { default as Clock } from './UI/Clock';
 export { default as CommonSection } from './UI/CommonSection';
+export { default as Loader } from './UI/Loader';
