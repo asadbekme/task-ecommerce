@@ -120,6 +120,7 @@ const Header = () => {
                     <div className="profile__action">
                       <Link to={"/signup"}>Signup</Link>
                       <Link to={"/login"}>Login</Link>
+                      <Link to={"/dashboard"}>Dashboard</Link>
                     </div>
                   )}
                 </div>
