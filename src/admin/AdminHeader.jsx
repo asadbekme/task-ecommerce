@@ -20,16 +20,16 @@ const AdminHeader = () => {
               <div className="admin__header--search">
                 <input type="text" placeholder="Search..." />
                 <span>
-                  <i class="ri-search-line"></i>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
 
               <div className="admin__header--settings">
                 <span>
-                  <i class="ri-notification-3-line"></i>
+                  <i className="ri-notification-3-line"></i>
                 </span>
                 <span>
-                  <i class="ri-settings-2-line"></i>
+                  <i className="ri-settings-2-line"></i>
                 </span>
                 <img src={currentUser.photoURL} alt="Current user" />
               </div>

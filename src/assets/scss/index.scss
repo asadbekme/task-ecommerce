@@ -23,6 +23,29 @@ section {
   }
 }
 
+.form__group {
+  width: 100%;
+
+  span {
+    font-size: 1.1rem;
+    color: $black-color;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px 9px;
+    border: 1px solid $black-color;
+    color: $black-color;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
 .btn__buy {
   border: none;
   outline: none;
