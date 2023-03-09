@@ -19,6 +19,10 @@ export const adminNavbar = [
     path: "/dashboard",
   },
   {
+    display: "Add-Product",
+    path: "/dashboard/add-product",
+  },
+  {
     display: "All-Products",
     path: "/dashboard/all-products",
   },
