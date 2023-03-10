@@ -1,7 +1,7 @@
 import { Container, Row } from "reactstrap";
 import useAuth from "../hooks/useAuth";
 import "../styles/admin-header.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { adminNavbar } from "../utils/constants";
 
 const AdminHeader = () => {
@@ -14,7 +14,9 @@ const AdminHeader = () => {
           <Container>
             <div className="admin__header--wrapper">
               <div className="admin__header--logo">
-                <h2>Ecommerce</h2>
+                <h2>
+                  <Link to={"/home"}>Ecommerce</Link>
+                </h2>
               </div>
 
               <div className="admin__header--search">
