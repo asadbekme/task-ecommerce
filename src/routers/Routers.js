@@ -1,7 +1,15 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
-import { Home, Signup, Login, Cart, Shop, Checkout, ProductDetails,} from "../pages";
-import { AllProducts, AddProduct, Dashboard } from '../admin';
+import {
+  Home,
+  Signup,
+  Login,
+  Cart,
+  Shop,
+  Checkout,
+  ProductDetails,
+} from "../pages";
+import { AllProducts, AddProduct, Dashboard, Users, Orders } from "../admin";
 
 const Routers = () => {
   return (
@@ -16,6 +24,8 @@ const Routers = () => {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="dashboard/all-products" element={<AllProducts />} />
         <Route path="dashboard/add-product" element={<AddProduct />} />
+        <Route path="dashboard/users" element={<Users />} />
+        <Route path="dashboard/orders" element={<Orders />} />
       </Route>
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />

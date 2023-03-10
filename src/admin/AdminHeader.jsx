@@ -33,7 +33,10 @@ const AdminHeader = () => {
                 <span>
                   <i className="ri-settings-2-line"></i>
                 </span>
-                <img src={currentUser.photoURL} alt="Current user" />
+                <img
+                  src={currentUser && currentUser.photoURL}
+                  alt="Current user"
+                />
               </div>
             </div>
           </Container>

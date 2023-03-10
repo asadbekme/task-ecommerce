@@ -72,7 +72,7 @@ const AddProduct = () => {
               <Loader />
             ) : (
               <>
-                <h4 className="add__product--title mb-4 text-center">
+                <h4 className="add__product--title fw-bold mb-4 text-center">
                   Add Product
                 </h4>
                 <Form onSubmit={addProductHandler}>
