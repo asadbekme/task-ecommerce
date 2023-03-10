@@ -1,0 +1,46 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.revenue__box,
+.orders__box,
+.products__box,
+.users__box {
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.revenue__box {
+  background: $card-bg-01;
+}
+
+.orders__box {
+  background: $card-bg-04;
+}
+
+.products__box {
+  background: $card-bg-03;
+}
+
+.users__box {
+  background: $card-bg-04;
+}
+
+.box {
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  &__value {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}
