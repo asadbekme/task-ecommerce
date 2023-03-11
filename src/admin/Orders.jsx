@@ -1,7 +1,18 @@
 import React from "react";
+import { Container, Row, Col } from "reactstrap";
 
 const Orders = () => {
-  return <div>Orders</div>;
+  return (
+    <section>
+      <Container>
+        <Row>
+          <Col lg="12">
+            <h4 className="text-center fw-bold">Orders</h4>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
 };
 
 export default Orders;

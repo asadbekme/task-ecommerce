@@ -21,14 +21,6 @@ const AddProduct = () => {
     e.preventDefault();
     setLoading(true);
 
-    // const product = {
-    //   title: title,
-    //   shortDesc: shortDesc,
-    //   description: description,
-    //   category: category,
-    //   price: price,
-    //   imgURL: productImg,
-    // };
     // * add product to the firebase database
     try {
       const docRef = await collection(db, "products");
@@ -44,12 +36,12 @@ const AddProduct = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await addDoc(docRef, {
-              title: title,
+              productName: title,
               shortDesc: shortDesc,
               description: description,
               category: category,
               price: price,
-              imgURL: downloadURL,
+              imgUrl: downloadURL,
             });
           });
           setLoading(false);
@@ -127,6 +119,7 @@ const AddProduct = () => {
                         onChange={(e) => setCategory(e.target.value)}
                         required
                       >
+                        <option>Select category</option>
                         <option value="chair">Chair</option>
                         <option value="sofa">Sofa</option>
                         <option value="mobile">Mobile</option>

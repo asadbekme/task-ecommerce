@@ -36,7 +36,7 @@ const Users = () => {
                 </thead>
                 <tbody>
                   {usersData?.map((user) => (
-                    <tr>
+                    <tr key={user.id}>
                       <td>
                         <img src={user.photoURL} alt="User photo" />
                       </td>

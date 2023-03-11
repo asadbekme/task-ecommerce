@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 
 const AllProducts = () => {
   const { data: productsData, loading } = useGetData("products");
+  console.log(productsData);
 
   const deleteProduct = async (id) => {
     await deleteDoc(doc(db, "products", id));
@@ -35,9 +36,9 @@ const AllProducts = () => {
                   {productsData.map((product) => (
                     <tr key={product.id}>
                       <td>
-                        <img src={product.imgURL} alt="Product image" />
+                        <img src={product.imgUrl} alt="Product image" />
                       </td>
-                      <td>{product.title}</td>
+                      <td>{product.productName}</td>
                       <td>{product.category}</td>
                       <td>${product.price}</td>
                       <td>

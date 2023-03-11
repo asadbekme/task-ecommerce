@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import { Helmet, Services, ProductList, Clock } from "../components";
+import { Helmet, Services, ProductList, Clock, Loader } from "../components";
 import { motion } from "framer-motion";
 import { counterTimerImg, heroImg } from "../assets/images";
 import "../styles/home.scss";
 import products from "../utils/products";
+import useGetData from "../hooks/useGetData";
 
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
@@ -14,6 +15,8 @@ const Home = () => {
   const [wirelessProducts, setWirelessProducts] = useState([]);
   const [popularProducts, setPopularProducts] = useState([]);
   const year = new Date().getFullYear();
+  // const { data: products, loading } = useGetData("products");
+  // console.log(products);
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(
@@ -41,7 +44,7 @@ const Home = () => {
     setMobileProducts(filteredMobileProducts);
     setWirelessProducts(filteredWirelessProducts);
     setPopularProducts(filteredPopularProducts);
-  }, []);
+  }, [products]);
 
   return (
     <Helmet title={"Home"}>

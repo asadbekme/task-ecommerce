@@ -30,7 +30,7 @@ import {
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
+    productName: "Stone and Beam Westview",
     imgUrl: doubleSofa01,
     category: "sofa",
     price: 193,
@@ -48,7 +48,7 @@ const products = [
   },
   {
     id: "02",
-    productName: "Rivet Brand Bigelow Modern ",
+    productName: "Rivet Brand Bigelow Modern",
     imgUrl: doubleSofa02,
     category: "sofa",
     price: 253,
