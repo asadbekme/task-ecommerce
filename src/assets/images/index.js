@@ -33,3 +33,4 @@ export { default as wireless03 } from "./wireless-03.png";
 export { default as wireless04 } from "./wireless-04.jfif";
 export { default as wireless05 } from "./wireless-05.jfif";
 export { default as wireless06 } from "./wireless-06.jfif";
+export { default as loader } from "./loader.svg";

@@ -1,9 +1,16 @@
 import { Col } from "reactstrap";
+import { loader } from "../../assets/images";
 
 const Loader = () => {
   return (
     <Col lg="12" className="text-center">
-      <h5 className="fw-bold">Loading...</h5>
+      <div className="w-100 d-flex align-items-center justify-content-center">
+        <img
+          src={loader}
+          alt="Loader image"
+          style={{ width: 200, height: 186 }}
+        />
+      </div>
     </Col>
   );
 };

@@ -72,7 +72,7 @@ const AddProduct = () => {
                     <span>Product title</span>
                     <input
                       type="text"
-                      placeholder="Double sofa"
+                      placeholder="Product Name"
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                       required
