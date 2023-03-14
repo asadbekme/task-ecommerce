@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { addProduct } from "../../slice/cart";
+import { FaCartPlus } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Col lg="3" md="4" className="mb-4">
+    <Col lg="3" md="4" sm="6" className="mb-4">
       <div className="product__card">
         <Link to={`/shop/${product.id}`}>
           <div className="product__img">
@@ -47,7 +48,7 @@ const ProductCard = ({ product }) => {
             className="product__add"
             onClick={addToCart}
           >
-            <i className="ri-add-line"></i>
+            <FaCartPlus />
           </motion.span>
         </div>
       </div>
