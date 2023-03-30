@@ -101,8 +101,8 @@
     }
 
     &--list {
-      @include flex(row, nowrap, center, center);
-      column-gap: 2.7rem;
+      @include flex(row, nowrap, space-around, center);
+      // column-gap: 3rem;
       @include responsive(sm) {
         flex-direction: column;
       }

@@ -6,11 +6,10 @@ const Clock = () => {
   const [hours, setHours] = useState();
   const [minutes, setMinutes] = useState();
   const [seconds, setSeconds] = useState();
-
   let interval;
 
   const countDown = () => {
-    const destination = new Date("17 March, 2023").getTime();
+    const destination = new Date("4 April, 2023").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();

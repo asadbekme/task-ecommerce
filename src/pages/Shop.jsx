@@ -49,18 +49,18 @@ const Shop = () => {
     }
   };
 
-  const handlePriceFilter = (e) => {
-    const priceFilterValue = e.target.value;
-    if (priceFilterValue === "ascending") {
-      const filteredProducts = products.sort((a, b) => a.price - b.price);
-      setProductsData(filteredProducts);
-    }
+  // const handlePriceFilter = (e) => {
+  //   const priceFilterValue = e.target.value;
+  //   if (priceFilterValue === "ascending") {
+  //     const filteredProducts = products.sort((a, b) => a.price - b.price);
+  //     setProductsData(filteredProducts);
+  //   }
 
-    if (priceFilterValue === "descending") {
-      const filteredProducts = products.sort((a, b) => b.price - a.price);
-      setProductsData(filteredProducts);
-    }
-  };
+  //   if (priceFilterValue === "descending") {
+  //     const filteredProducts = products.sort((a, b) => b.price - a.price);
+  //     setProductsData(filteredProducts);
+  //   }
+  // };
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
@@ -93,7 +93,7 @@ const Shop = () => {
             </Col>
             <Col lg="3" md="6" className="text-end">
               <div className="shop__filter--widget">
-                <select onChange={handlePriceFilter}>
+                <select>
                   <option>Sort by</option>
                   <option value="ascending">Ascending</option>
                   <option value="descending">Descending</option>

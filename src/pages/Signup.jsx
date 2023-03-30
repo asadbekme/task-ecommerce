@@ -54,7 +54,7 @@ const Signup = () => {
         }
       );
 
-      console.log(user);
+      // console.log(user);
       setLoading(false);
       toast.success("Account created");
       navigate("/login");
