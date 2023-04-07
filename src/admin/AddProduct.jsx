@@ -33,13 +33,21 @@ const AddProduct = () => {
 
     // * add product to the firebase database
     try {
-      const docRef = await collection(db, "products");
+      const docRef = collection(db, "products");
       const storageRef = ref(
         storage,
         `productImages/${Date.now() + productImg.name}`
       );
+
       const uploadTask = uploadBytesResumable(storageRef, productImg);
+
       uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+        },
         () => {
           toast.error("Images not uploaded");
         },
