@@ -22,37 +22,39 @@ const AllProducts = () => {
             {loading ? (
               <Loader />
             ) : (
-              <table className="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {productsData.map((product) => (
-                    <tr key={product.id}>
-                      <td>
-                        <img src={product.imgUrl} alt="Product image" />
-                      </td>
-                      <td>{product.productName}</td>
-                      <td>{product.category}</td>
-                      <td>${product.price}</td>
-                      <td>
-                        <button
-                          onClick={() => deleteProduct(product.id)}
-                          className="btn btn-danger"
-                        >
-                          Delete
-                        </button>
-                      </td>
+              <div className="table-responsive">
+                <table className="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Title</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Action</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {productsData.map((product) => (
+                      <tr key={product.id}>
+                        <td>
+                          <img src={product.imgUrl} alt="Product image" />
+                        </td>
+                        <td>{product.productName}</td>
+                        <td>{product.category}</td>
+                        <td>${product.price}</td>
+                        <td>
+                          <button
+                            onClick={() => deleteProduct(product.id)}
+                            className="btn btn-danger"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
           </Col>
         </Row>

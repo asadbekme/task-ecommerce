@@ -5,12 +5,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCiu7TcodL-5C6wz9Iuh_q7ubq1I8HpOjc",
-  authDomain: "ecommerce-task-254dc.firebaseapp.com",
-  projectId: "ecommerce-task-254dc",
-  storageBucket: "ecommerce-task-254dc.appspot.com",
-  messagingSenderId: "253873602799",
-  appId: "1:253873602799:web:03a91e15a15c8cc7a09b1a",
+  apiKey: "AIzaSyCoG9yrOxP5Y429UXh76YrMeyVq3YXv1NE",
+  authDomain: "ecommerce-task-de74f.firebaseapp.com",
+  projectId: "ecommerce-task-de74f",
+  storageBucket: "ecommerce-task-de74f.appspot.com",
+  messagingSenderId: "681666032316",
+  appId: "1:681666032316:web:d24dcbdeffabd8e7c356b9",
 };
 
 // Initialize Firebase

@@ -23,36 +23,38 @@ const Cart = () => {
                   No product added to the cart
                 </h2>
               ) : (
-                <table className="table bordered">
-                  <thead>
-                    <tr>
-                      <th>Image</th>
-                      <th>ProductName</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Delete</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    {cartProducts.map((product, index) => (
-                      <tr key={index}>
-                        <td>
-                          <img src={product.imgUrl} alt="Product image" />
-                        </td>
-                        <td>{product.productName}</td>
-                        <td>${product.price}</td>
-                        <td>{product.quantity} px</td>
-                        <motion.td
-                          whileTap={{ scale: 1.1 }}
-                          onClick={() => dispatch(deleteProduct(product.id))}
-                        >
-                          <i className="ri-delete-bin-line"></i>
-                        </motion.td>
+                <div className="table-responsive">
+                  <table className="table bordered">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>ProductName</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Delete</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+
+                    <tbody>
+                      {cartProducts.map((product, index) => (
+                        <tr key={index}>
+                          <td>
+                            <img src={product.imgUrl} alt="Product image" />
+                          </td>
+                          <td>{product.productName}</td>
+                          <td>${product.price}</td>
+                          <td>{product.quantity} px</td>
+                          <motion.td
+                            whileTap={{ scale: 1.1 }}
+                            onClick={() => dispatch(deleteProduct(product.id))}
+                          >
+                            <i className="ri-delete-bin-line"></i>
+                          </motion.td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               )}
             </Col>
 
