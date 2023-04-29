@@ -73,7 +73,7 @@ const Shop = () => {
 
   return (
     <Helmet title="Shop">
-      <CommonSection title={"Products"} />
+      <CommonSection title={"Mahsulotlar"} />
 
       <section className="shop">
         <Container>
@@ -81,7 +81,7 @@ const Shop = () => {
             <Col lg="3" md="6">
               <div className="shop__filter--widget">
                 <select onChange={handleFilter}>
-                  <option>Filter by category</option>
+                  <option>Kategoriya bo'yicha filtrlash</option>
                   <option value="all">All</option>
                   <option value="sofa">Sofa</option>
                   <option value="mobile">Mobile</option>
@@ -94,9 +94,9 @@ const Shop = () => {
             <Col lg="3" md="6" className="text-end">
               <div className="shop__filter--widget">
                 <select>
-                  <option>Sort by</option>
-                  <option value="ascending">Ascending</option>
-                  <option value="descending">Descending</option>
+                  <option>Saralash turi</option>
+                  <option value="ascending">O'suvchi</option>
+                  <option value="descending">Kamayuvchi</option>
                 </select>
               </div>
             </Col>
@@ -105,7 +105,7 @@ const Shop = () => {
                 <input
                   type="text"
                   className="shop__search--input"
-                  placeholder="Search..."
+                  placeholder="Qidirish..."
                   onChange={handleSearch}
                 />
                 <span>

@@ -12,7 +12,7 @@ const Cart = () => {
 
   return (
     <Helmet title="Cart">
-      <CommonSection title={"Shopping Cart"} />
+      <CommonSection title={"Xarid savatchasi"} />
 
       <section className="cart">
         <Container>
@@ -20,18 +20,18 @@ const Cart = () => {
             <Col lg="9">
               {cartProducts.length === 0 ? (
                 <h2 className="fs-4 text-center">
-                  No product added to the cart
+                  Savatchaga hech qanday mahsulot qo'shilmagan
                 </h2>
               ) : (
                 <div className="table-responsive">
-                  <table className="table bordered">
+                  <table className="table table-bordered">
                     <thead>
                       <tr>
-                        <th>Image</th>
-                        <th>ProductName</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Delete</th>
+                        <th>Rasm</th>
+                        <th>Mahsulot nomi</th>
+                        <th>Narx</th>
+                        <th>Miqdor</th>
+                        <th>O'chirish</th>
                       </tr>
                     </thead>
 
@@ -43,7 +43,7 @@ const Cart = () => {
                           </td>
                           <td>{product.productName}</td>
                           <td>${product.price}</td>
-                          <td>{product.quantity} px</td>
+                          <td>{product.quantity} dona</td>
                           <motion.td
                             whileTap={{ scale: 1.1 }}
                             onClick={() => dispatch(deleteProduct(product.id))}
@@ -60,18 +60,20 @@ const Cart = () => {
 
             <Col lg="3">
               <div className="d-flex align-items-center justify-content-between">
-                <h6>Subtotal</h6>
+                <h6>Jami summa</h6>
                 <span className="fs-4 fw-bold">${totalAmount}</span>
               </div>
               <p className="mt-4 text-black">
-                Taxes and shipping will calculate in checkout
+                Soliqlar va jo'natmalar kassada hisoblab chiqiladi
               </p>
               <div>
                 <Link to="/checkout">
-                  <button className="btn__buy w-100">Checkout</button>
+                  <button className="btn__buy w-100">Tasdiqlash</button>
                 </Link>
                 <Link to="/shop">
-                  <button className="btn__buy w-100">Continue Shopping</button>
+                  <button className="btn__buy w-100">
+                    Xarid qilishda davom eting
+                  </button>
                 </Link>
               </div>
             </Col>

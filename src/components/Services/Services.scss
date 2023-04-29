@@ -3,7 +3,7 @@
 
 .services {
   &__item {
-    padding: 20px;
+    padding: 16px;
     background: $card-bg-01;
     @include flex(row, nowrap, flex-start, center);
     column-gap: 0.7rem;

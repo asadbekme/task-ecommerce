@@ -74,7 +74,7 @@ const Signup = () => {
               <Loader />
             ) : (
               <Col lg="6" className="mx-auto text-center">
-                <h3 className="signup__title">Signup</h3>
+                <h3 className="signup__title">Ro'yhatdan o'tish</h3>
 
                 <Form className="signup__form" onSubmit={signup}>
                   <FormGroup className="signup__form--group">
@@ -83,7 +83,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      placeholder="Username"
+                      placeholder="Ismingizni kiriting"
                     />
                   </FormGroup>
 
@@ -93,7 +93,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
+                      placeholder="Emailingizni kiriting"
                     />
                   </FormGroup>
 
@@ -103,7 +103,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter your password"
+                      placeholder="Parolingizni kiriting"
                     />
                   </FormGroup>
 
@@ -116,10 +116,10 @@ const Signup = () => {
                   </FormGroup>
 
                   <button type="submit" className="signup__btn">
-                    Create an account
+                    Ro'yhatdan o'tish
                   </button>
                   <p className="signup__description">
-                    Already have an account? <Link to={"/login"}>Link</Link>
+                    Akkountingiz bormi? <Link to={"/login"}>Kirish</Link>
                   </p>
                 </Form>
               </Col>

@@ -22,7 +22,7 @@ const Header = () => {
   const logout = () => {
     signOut(auth)
       .then(() => {
-        toast.success("Logged out");
+        toast.success("Akkountdan chiqarildi");
         navigate("/home");
       })
       .catch((error) => {
@@ -67,7 +67,7 @@ const Header = () => {
             <Link to="/">
               <div className="header__logo">
                 <img src={logo} alt="Logo" />
-                <span>Ecommerce</span>
+                <span>Mebel Shop</span>
               </div>
             </Link>
 
@@ -115,12 +115,12 @@ const Header = () => {
                   onClick={toggleProfileActions}
                 >
                   {currentUser ? (
-                    <span onClick={logout}>Logout</span>
+                    <span onClick={logout}>Chiqish</span>
                   ) : (
                     <div className="profile__action">
-                      <Link to={"/signup"}>Signup</Link>
-                      <Link to={"/login"}>Login</Link>
-                      <Link to={"/dashboard"}>Dashboard</Link>
+                      <Link to={"/signup"}>Ro'yxatdan o'tish</Link>
+                      <Link to={"/login"}>Kirish</Link>
+                      <Link to={"/dashboard"}>Boshqaruv paneli</Link>
                     </div>
                   )}
                 </div>

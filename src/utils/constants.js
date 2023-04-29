@@ -1,37 +1,37 @@
 export const navLinks = [
   {
     path: "home",
-    display: "Home",
+    display: "Bosh sahifa",
   },
   {
     path: "shop",
-    display: "Shop",
+    display: "Do'kon",
   },
   {
     path: "cart",
-    display: "Cart",
+    display: "Savatcha",
   },
 ];
 
 export const adminNavbar = [
   {
-    display: "Dashboard",
+    display: "Boshqaruv paneli",
     path: "/dashboard",
   },
   {
-    display: "Add-Product",
+    display: "Mahsulot qo'shish",
     path: "/dashboard/add-product",
   },
   {
-    display: "All-Products",
+    display: "Mahsulotlar",
     path: "/dashboard/all-products",
   },
   {
-    display: "Orders",
+    display: "Buyurtmalar",
     path: "/dashboard/orders",
   },
   {
-    display: "Users",
+    display: "Foydalanuvchilar",
     path: "/dashboard/users",
   },
 ];

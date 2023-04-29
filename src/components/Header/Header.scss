@@ -126,8 +126,8 @@
     &__actions {
       position: absolute;
       top: 97%;
-      left: 0;
-      width: 100px;
+      left: -350%;
+      width: 164px;
       z-index: 10;
       padding: 10px;
       @include flex(column, nowrap, flex-start, center);
@@ -143,6 +143,7 @@
 
     &__show {
       display: block;
+      text-align: center;
     }
   }
 

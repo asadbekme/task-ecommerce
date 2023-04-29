@@ -11,17 +11,15 @@ const Footer = () => {
         <Row>
           <Col lg="4" md="6" className="mb-4">
             <div className="footer__info">
-              <h4 className="footer__title">Ecommerce</h4>
+              <h4 className="footer__title">Mebel Shop</h4>
               <p className="footer__text mt-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                ipsam odit consequatur debitis perferendis optio, placeat
-                impedit veniam.
+                Mebel mahsulotlari sotiladigan onlayn do'kon
               </p>
             </div>
           </Col>
           <Col lg="3" md="4" className="mb-4">
             <div className="footer__links">
-              <h4 className="footer__links--title">Top Categories</h4>
+              <h4 className="footer__links--title">Eng yaxshi kategoriyalar</h4>
               <ListGroup>
                 <ListGroupItem className="footer__links--item ps-0 border-0">
                   <Link to="#">Mobile Phones</Link>
@@ -43,42 +41,42 @@ const Footer = () => {
           </Col>
           <Col lg="2" md="3" className="mb-4">
             <div className="footer__links">
-              <h4 className="footer__links--title">Useful links</h4>
+              <h4 className="footer__links--title">Foydali havolalalr</h4>
               <ListGroup>
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="/shop">Shop</Link>
+                  <Link to="/shop">Do'kon</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="/cart">Cart</Link>
+                  <Link to="/cart">Savatcha</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="/login">Login</Link>
+                  <Link to="/login">Kirish</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="#">Privacy Policy</Link>
+                  <Link to="#">Maxfiylik siyosati</Link>
                 </ListGroupItem>
               </ListGroup>
             </div>
           </Col>
           <Col lg="3" md="4">
             <div className="footer__links">
-              <h4 className="footer__links--title">Contact</h4>
+              <h4 className="footer__links--title">Aloqa</h4>
               <ListGroup className="footer__contact">
                 <ListGroupItem className="footer__links--item ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
                     <i className="ri-map-pin-line"></i>
                   </span>
-                  <p>77-home, Urgench, Uzbekistan</p>
+                  <p>Urgench, Al-Xorazmiy ko'cha, 77-uy</p>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
                     <i className="ri-phone-line"></i>
                   </span>
-                  <p>+998912775177</p>
+                  <p>+998918775177</p>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0 d-flex align-items-center gap-2">
@@ -93,8 +91,8 @@ const Footer = () => {
 
           <Col lg="12">
             <p className="footer__copyright">
-              Copyright © {year} developed by Asadbek Rakhimov. All rights
-              reserved.
+              Mualliflik huquqi © {year} Asadbek Rakhimov ishlab chiqilgan.
+              Barcha huquqlar himoyalangan.
             </p>
           </Col>
         </Row>

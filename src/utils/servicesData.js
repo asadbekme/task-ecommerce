@@ -1,27 +1,26 @@
 export const servicesData = [
   {
     icon: "ri-truck-line",
-    title: "Free Shipping",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Yetkazib berish",
+    subtitle: "Bepul yetkazib berish xizmati mavjud.",
     bg: "#fdefe6",
   },
   {
-    icon: "ri-refresh-line",
-    title: "Easy Returns",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#ceebe9",
+    icon: "ri-exchange-dollar-line",
+    title: "Kafolat",
+    subtitle: "Mahsulotlarga kafolat beriladi.",
+    bg: "#d6e5fb",
   },
   {
     icon: "ri-secure-payment-line",
-    title: "Secure Payment",
-    subtitle: "Lorem ipsum dolor sit amet.",
+    title: "Xavfsiz to'lov",
+    subtitle: "Xavfsiz to'lov xizmati mavjud.",
     bg: "#e2f2b2",
   },
   {
-    icon: "ri-exchange-dollar-line",
-    title: " Back Guarantee",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#d6e5fb",
+    icon: "ri-refresh-line",
+    title: "Qaytarib olish",
+    subtitle: "Mahsulotni qaytarib olish xizmati mavjud.",
+    bg: "#ceebe9",
   },
 ];
-

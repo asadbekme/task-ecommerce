@@ -15,12 +15,12 @@ const AdminHeader = () => {
             <div className="admin__header--wrapper">
               <div className="admin__header--logo">
                 <h2>
-                  <Link to={"/home"}>Ecommerce</Link>
+                  <Link to={"/home"}>Mebel Shop</Link>
                 </h2>
               </div>
 
               <div className="admin__header--search">
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Qidiruv..." />
                 <span>
                   <i className="ri-search-line"></i>
                 </span>

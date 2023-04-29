@@ -43,7 +43,7 @@ const Login = () => {
               <Loader />
             ) : (
               <Col lg="6" className="mx-auto text-center">
-                <h3 className="login__title">Login</h3>
+                <h3 className="login__title">Kirish</h3>
 
                 <Form className="login__form" onSubmit={signIn}>
                   <FormGroup className="login__form--group">
@@ -52,7 +52,7 @@ const Login = () => {
                       className="login__form--input"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
+                      placeholder="Emailingizni kiriting"
                     />
                   </FormGroup>
 
@@ -62,16 +62,16 @@ const Login = () => {
                       className="login__form--input"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter your password"
+                      placeholder="Parolingizni kiriting"
                     />
                   </FormGroup>
 
                   <button type="submit" className="login__btn">
-                    Login
+                    Kirish
                   </button>
                   <p className="login__description">
-                    Don't have an account?{" "}
-                    <Link to={"/signup"}>Create an account</Link>
+                    Akkountingiz yo'qmi{" "}
+                    <Link to={"/signup"}>Akkount yaratish</Link>
                   </p>
                 </Form>
               </Col>

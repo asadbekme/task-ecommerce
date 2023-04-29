@@ -57,20 +57,22 @@ const Home = () => {
               <Row>
                 <Col lg="6" md="6">
                   <div className="hero__content">
-                    <p className="hero__subtitle">Trending product in {year}</p>
+                    <p className="hero__subtitle">
+                      {year}-yilning trendagi mebel mahsulotlari
+                    </p>
                     <h2 className="hero__title">
-                      Make your interior more minimalistic & modern
+                      Ichki makoningizni minimalistik va zamonaviyroq qiling
                     </h2>
                     <p className="hero__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eveniet, veritatis saepe animi doloremque amet
-                      necessitatibus praesentium sed!
+                      Mebellar noodatiy va orginal bo’lishi, kishi yuzida
+                      tabassum paydo qilib, kayfiyatni ko’tara olishi mumkin
+                      emas deya kim aytdi?
                     </p>
                     <motion.button
                       whileTap={{ scale: 1.2 }}
                       className="hero__btn"
                     >
-                      <Link to="/shop">SHOP NOW</Link>
+                      <Link to="/shop">XARID QILING</Link>
                     </motion.button>
                   </div>
                 </Col>
@@ -91,7 +93,7 @@ const Home = () => {
               <Row>
                 <Col lg="12" className="text-center mb-4">
                   <h2 className="trending__products--title title">
-                    Trending Products
+                    Trendagi mahsulotlar
                   </h2>
                 </Col>
                 <ProductList data={trendingProducts} />
@@ -103,7 +105,9 @@ const Home = () => {
             <Container>
               <Row>
                 <Col lg="12" className="text-center mb-4">
-                  <h2 className="best__sales--title title">Best Sales</h2>
+                  <h2 className="best__sales--title title">
+                    Eng yaxshi sotuvdagi mahsulotlar
+                  </h2>
                 </Col>
                 <ProductList data={bestSalesProducts} />
               </Row>
@@ -115,8 +119,10 @@ const Home = () => {
               <Row>
                 <Col lg="6" md="12">
                   <div className="timer__count--content">
-                    <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
-                    <h3 className="text-white fs-5 mb-3">Quality Armchair</h3>
+                    <h4 className="text-white fs-6 mb-2">
+                      Cheklangan takliflar
+                    </h4>
+                    <h3 className="text-white fs-5 mb-3">Sifatli kreslolar</h3>
                   </div>
                   <Clock />
                   <div className="timer__count--button">
@@ -124,7 +130,7 @@ const Home = () => {
                       whileTap={{ scale: 1.2 }}
                       className="timer__count--btn"
                     >
-                      <Link to="/shop">Visit store</Link>
+                      <Link to="/shop">Tashrif buyurish</Link>
                     </motion.button>
                   </div>
                 </Col>
@@ -144,7 +150,9 @@ const Home = () => {
             <Container>
               <Row>
                 <Col lg="12" className="text-center mb-4">
-                  <h2 className="new__arrivals--title title">New Arrivals</h2>
+                  <h2 className="new__arrivals--title title">
+                    Yangi kelgan mahsulotlar
+                  </h2>
                 </Col>
                 <ProductList data={mobileProducts} />
                 <ProductList data={wirelessProducts} />
@@ -157,7 +165,7 @@ const Home = () => {
               <Row>
                 <Col lg="12" className="text-center mb-4">
                   <h2 className="popular__products--title title">
-                    Popular Products
+                    Ommabop mahsulotlar
                   </h2>
                 </Col>
                 <ProductList data={popularProducts} />

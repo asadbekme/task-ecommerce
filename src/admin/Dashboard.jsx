@@ -16,25 +16,25 @@ const Dashboard = () => {
           <Row>
             <Col className="lg-3">
               <div className="revenue__box">
-                <h5 className="box__title">Total Sales</h5>
+                <h5 className="box__title">Jami sotuvlar</h5>
                 <span className="box__value">$7890</span>
               </div>
             </Col>
             <Col className="lg-3">
               <div className="orders__box">
-                <h5 className="box__title">Orders</h5>
+                <h5 className="box__title">Buyurtmalar</h5>
                 <span className="box__value">789</span>
               </div>
             </Col>
             <Col className="lg-3">
               <div className="products__box">
-                <h5 className="box__title">Total Products</h5>
+                <h5 className="box__title">Barcha mahsulotlar</h5>
                 <span className="box__value">{products.length}</span>
               </div>
             </Col>
             <Col className="lg-3">
               <div className="users__box">
-                <h5 className="box__title">Total Users</h5>
+                <h5 className="box__title">Barcha mijozlar</h5>
                 <span className="box__value">{users.length}</span>
               </div>
             </Col>
