@@ -16,7 +16,7 @@ const Home = () => {
   const [popularProducts, setPopularProducts] = useState([]);
   const year = new Date().getFullYear();
   const { data: products, loading } = useGetData("products");
-  console.log(products);
+  // console.log(products);
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(

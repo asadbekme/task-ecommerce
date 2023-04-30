@@ -26,7 +26,7 @@ const Login = () => {
       const user = userCredential.user;
       console.log(user);
       setLoading(false);
-      toast.success("Successfully logged in");
+      toast.success("Muvaffaqiyatli tizimga kirildi");
       navigate("/home");
     } catch (error) {
       setLoading(false);
@@ -52,7 +52,7 @@ const Login = () => {
                       className="login__form--input"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Emailingizni kiriting"
+                      placeholder="Email kiriting"
                     />
                   </FormGroup>
 
@@ -62,7 +62,7 @@ const Login = () => {
                       className="login__form--input"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Parolingizni kiriting"
+                      placeholder="Parol kiriting"
                     />
                   </FormGroup>
 
@@ -70,7 +70,7 @@ const Login = () => {
                     Kirish
                   </button>
                   <p className="login__description">
-                    Akkountingiz yo'qmi{" "}
+                    Akkountingiz yo'qmi?{" "}
                     <Link to={"/signup"}>Akkount yaratish</Link>
                   </p>
                 </Form>

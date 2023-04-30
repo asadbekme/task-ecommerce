@@ -1,11 +1,19 @@
-import { Helmet, CommonSection, ProductList } from "../components";
+import { useEffect, useState } from "react";
+import { Helmet, CommonSection, ProductList, Loader } from "../components";
 import { Container, Row, Col } from "reactstrap";
 import "../styles/shop.scss";
-import products from "../utils/products";
-import { useState } from "react";
+// import products from "../utils/products";
+import useGetData from "../hooks/useGetData";
 
 const Shop = () => {
-  const [productsData, setProductsData] = useState(products);
+  const { data: products, loading } = useGetData("products");
+  const [productsData, setProductsData] = useState([]);
+
+  useEffect(() => {
+    if (!loading) {
+      setProductsData(products);
+    }
+  }, [products]);
 
   const handleFilter = (e) => {
     const filterValue = e.target.value;
@@ -75,59 +83,65 @@ const Shop = () => {
     <Helmet title="Shop">
       <CommonSection title={"Mahsulotlar"} />
 
-      <section className="shop">
-        <Container>
-          <Row>
-            <Col lg="3" md="6">
-              <div className="shop__filter--widget">
-                <select onChange={handleFilter}>
-                  <option>Kategoriya bo'yicha filtrlash</option>
-                  <option value="all">All</option>
-                  <option value="sofa">Sofa</option>
-                  <option value="mobile">Mobile</option>
-                  <option value="chair">Chair</option>
-                  <option value="watch">Watch</option>
-                  <option value="wireless">Wireless</option>
-                </select>
-              </div>
-            </Col>
-            <Col lg="3" md="6" className="text-end">
-              <div className="shop__filter--widget">
-                <select>
-                  <option>Saralash turi</option>
-                  <option value="ascending">O'suvchi</option>
-                  <option value="descending">Kamayuvchi</option>
-                </select>
-              </div>
-            </Col>
-            <Col lg="6" md="12">
-              <div className="shop__search">
-                <input
-                  type="text"
-                  className="shop__search--input"
-                  placeholder="Qidirish..."
-                  onChange={handleSearch}
-                />
-                <span>
-                  <i className="ri-search-line"></i>
-                </span>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <section className="shop">
+            <Container>
+              <Row>
+                <Col lg="3" md="6">
+                  <div className="shop__filter--widget">
+                    <select onChange={handleFilter}>
+                      <option>Kategoriya bo'yicha filtrlash</option>
+                      <option value="all">All</option>
+                      <option value="sofa">Sofa</option>
+                      <option value="mobile">Mobile</option>
+                      <option value="chair">Chair</option>
+                      <option value="watch">Watch</option>
+                      <option value="wireless">Wireless</option>
+                    </select>
+                  </div>
+                </Col>
+                <Col lg="3" md="6" className="text-end">
+                  <div className="shop__filter--widget">
+                    <select>
+                      <option>Saralash turi</option>
+                      <option value="ascending">O'suvchi</option>
+                      <option value="descending">Kamayuvchi</option>
+                    </select>
+                  </div>
+                </Col>
+                <Col lg="6" md="12">
+                  <div className="shop__search">
+                    <input
+                      type="text"
+                      className="shop__search--input"
+                      placeholder="Qidirish..."
+                      onChange={handleSearch}
+                    />
+                    <span>
+                      <i className="ri-search-line"></i>
+                    </span>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
 
-      <section className="products pt-0">
-        <Container>
-          <Row>
-            {productsData.length === 0 ? (
-              <h1 className="text-center fs-4">No products are found.</h1>
-            ) : (
-              <ProductList data={productsData} />
-            )}
-          </Row>
-        </Container>
-      </section>
+          <section className="products pt-0">
+            <Container>
+              <Row>
+                {productsData.length === 0 ? (
+                  <h1 className="text-center fs-4">No products are found.</h1>
+                ) : (
+                  <ProductList data={productsData} />
+                )}
+              </Row>
+            </Container>
+          </section>
+        </>
+      )}
     </Helmet>
   );
 };

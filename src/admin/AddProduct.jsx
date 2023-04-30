@@ -49,7 +49,7 @@ const AddProduct = () => {
           console.log("Upload is " + progress + "% done");
         },
         () => {
-          toast.error("Images not uploaded");
+          toast.error("Rasmlar yuklanmagan!");
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -65,13 +65,13 @@ const AddProduct = () => {
             });
           });
           setLoading(false);
-          toast.success("Product successfully added!");
+          toast.success("Mahsulot muvaffaqiyatli qo'shildi!");
           navigate("/dashboard/all-products");
         }
       );
     } catch (error) {
       setLoading(false);
-      toast.error("Product not added!");
+      toast.error("Mahsulot qo'shilmagan!");
     }
   };
 
@@ -84,11 +84,11 @@ const AddProduct = () => {
           ) : (
             <Col lg="12">
               <h4 className="add__product--title fw-bold mb-4 text-center">
-                Add Product
+                Mahsulot qo'shish
               </h4>
               <Form onSubmit={addProductHandler}>
                 <FormGroup className="form__group">
-                  <span>Product title</span>
+                  <span>Mahsulot sarlavhasi</span>
                   <input
                     type="text"
                     placeholder="Product Name"
@@ -98,7 +98,7 @@ const AddProduct = () => {
                   />
                 </FormGroup>
                 <FormGroup className="form__group">
-                  <span>Short Description</span>
+                  <span>Qisqacha Tasnif</span>
                   <input
                     type="text"
                     placeholder="Lorem..."
@@ -108,7 +108,7 @@ const AddProduct = () => {
                   />
                 </FormGroup>
                 <FormGroup className="form__group">
-                  <span>Description</span>
+                  <span>Tavsif</span>
                   <textarea
                     rows="5"
                     placeholder="Description"
@@ -120,7 +120,7 @@ const AddProduct = () => {
 
                 <div className="d-flex align-items-center justify-content-between gap-5">
                   <FormGroup className="form__group w-50">
-                    <span>Price</span>
+                    <span>Narx</span>
                     <input
                       type="number"
                       placeholder="$100"
@@ -131,7 +131,7 @@ const AddProduct = () => {
                   </FormGroup>
 
                   <FormGroup className="form__group w-50">
-                    <span>Category</span>
+                    <span>Kategoriya</span>
                     <select
                       className="w-100 p-2 rounded-1"
                       value={category}
@@ -150,7 +150,7 @@ const AddProduct = () => {
 
                 <div>
                   <FormGroup className="form__group">
-                    <span>Product Image</span>
+                    <span>Mahsulot rasmi</span>
                     <input
                       type="file"
                       onChange={(e) => setProductImg(e.target.files[0])}
@@ -160,7 +160,7 @@ const AddProduct = () => {
                 </div>
 
                 <button type="submit" className="add__product--btn btn__buy">
-                  Add Product
+                  Mahsulot qo'shish
                 </button>
               </Form>
             </Col>

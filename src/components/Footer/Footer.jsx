@@ -69,7 +69,7 @@ const Footer = () => {
                   <span>
                     <i className="ri-map-pin-line"></i>
                   </span>
-                  <p>Urgench, Al-Xorazmiy ko'cha, 77-uy</p>
+                  <p>Urganch shahri, Al-Xorazmiy ko'cha, 77-uy</p>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0 d-flex align-items-center gap-2">

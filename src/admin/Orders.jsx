@@ -7,7 +7,7 @@ const Orders = () => {
       <Container>
         <Row>
           <Col lg="12">
-            <h4 className="text-center fw-bold">Orders</h4>
+            <h4 className="text-center fw-bold">Buyurtmalar</h4>
           </Col>
         </Row>
       </Container>

@@ -24,6 +24,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   // const product = products.find((product) => product.id === id);
   const { data: products, loading } = useGetData("products");
+  console.log(loading);
   const docRef = doc(db, "products", id);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const ProductDetails = () => {
     };
 
     getProduct();
-  });
+  }, []);
 
   const {
     category,
@@ -60,7 +61,7 @@ const ProductDetails = () => {
 
     const reviewObj = { ...reviewData, rating: rating };
     console.log(reviewObj);
-    toast.success("Review submitted.");
+    toast.success("Sharh jo'natildi");
   };
 
   const addToCart = () => {
@@ -73,17 +74,17 @@ const ProductDetails = () => {
       })
     );
 
-    toast.success("Product added successfully.");
+    toast.success("Mahsulot muvaffaqiyatli qo'shildi");
   };
 
   return (
     <Helmet title={productName}>
+      <CommonSection title={productName} />
+
       {loading ? (
         <Loader />
       ) : (
         <>
-          <CommonSection title={productName} />
-
           <section className="pt-0 bg-white">
             <Container>
               <Row>
@@ -118,7 +119,7 @@ const ProductDetails = () => {
 
                     <div className="d-flex align-items-center gap-5">
                       <span className="product__price">${price}</span>
-                      <span>Category: {category?.toLowerCase()}</span>
+                      <span>Kategoriya: {category?.toLowerCase()}</span>
                     </div>
                     <p className="product__shortDesc">{shortDesc}</p>
                     <motion.button
@@ -126,7 +127,7 @@ const ProductDetails = () => {
                       className="product__btn"
                       onClick={addToCart}
                     >
-                      Add to cart
+                      Savatchaga qo'shish
                     </motion.button>
                   </div>
                 </Col>
@@ -143,13 +144,13 @@ const ProductDetails = () => {
                       className={tab === "description" ? "tab__active" : ""}
                       onClick={() => setTab("description")}
                     >
-                      Description
+                      Tasnif
                     </h6>
                     <h6
                       className={tab === "reviews" ? "tab__active" : ""}
                       onClick={() => setTab("reviews")}
                     >
-                      Reviews
+                      Sharhlar
                     </h6>
                   </div>
 
@@ -171,12 +172,12 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="reviews__form">
-                          <h4>Leave your exprience</h4>
+                          <h4>Tajribangizni qoldiring</h4>
                           <form onSubmit={submitHandler}>
                             <div className="form__group">
                               <input
                                 type="text"
-                                placeholder="Enter name"
+                                placeholder="Ism kiriting"
                                 onChange={(e) =>
                                   setReviewData({
                                     ...reviewData,
@@ -224,7 +225,7 @@ const ProductDetails = () => {
                               <textarea
                                 rows={4}
                                 type="text"
-                                placeholder="Review message"
+                                placeholder="Sharh xabari"
                                 onChange={(e) =>
                                   setReviewData({
                                     ...reviewData,
@@ -240,7 +241,7 @@ const ProductDetails = () => {
                               type="submit"
                               className="form__btn"
                             >
-                              Submit
+                              Jo'natish
                             </motion.button>
                           </form>
                         </div>
@@ -250,7 +251,7 @@ const ProductDetails = () => {
                 </Col>
 
                 <Col lg="12" className="my-5">
-                  <h2 className="related__title">You might also like</h2>
+                  <h2 className="related__title">Sizga ham yoqishi mumkin</h2>
                 </Col>
 
                 <ProductList data={relatedProducts} />

@@ -9,45 +9,48 @@ const Checkout = () => {
 
   return (
     <Helmet title="Checkout">
-      <CommonSection title="Checkout" />
+      <CommonSection title="Pul to'lash" />
 
       <section className="checkout">
         <Container>
           <Row>
             <Col lg="8">
               <h6 className="checkout__title mb-4 fw-bold">
-                Billing Information
+                To'lov ma'lumotlari
               </h6>
               <Form className="checkout__form">
-                <FormInput placeholder={"Enter your name"} />
-                <FormInput type="email" placeholder={"Enter your email"} />
-                <FormInput type="number" placeholder={"Phone number"} />
-                <FormInput placeholder={"Street address"} />
-                <FormInput placeholder={"City"} />
-                <FormInput placeholder={"Postal code"} />
-                <FormInput placeholder={"Country"} />
+                <FormInput placeholder={"Ism kiriting"} />
+                <FormInput type="email" placeholder={"Email kiriting"} />
+                <FormInput
+                  type="number"
+                  placeholder={"Telefon raqam kiriting"}
+                />
+                <FormInput placeholder={"Ko'cha manzili"} />
+                <FormInput placeholder={"Shahar"} />
+                <FormInput placeholder={"Pochta kodi"} />
+                <FormInput placeholder={"Davlat"} />
               </Form>
             </Col>
             <Col lg="4">
               <div className="checkout__cart">
                 <h6>
-                  Total Quantity: <span>{totalQuantity} products</span>
+                  Umumiy miqdor: <span>{totalQuantity} ta mahsulot</span>
                 </h6>
                 <h6>
-                  Subtotal: <span>${totalAmount}</span>
+                  Jami: <span>${totalAmount}</span>
                 </h6>
                 <h6>
                   <span>
-                    Shipping: <br />
-                    free shipping:
+                    Yetkazib berish: <br />
+                    Bepul yetkazib berish:
                   </span>{" "}
                   <span>$0</span>
                 </h6>
                 <h4>
-                  Total Cost: <span>${totalAmount}</span>
+                  Umumiy xarajat: <span>${totalAmount}</span>
                 </h4>
                 <button className="checkout__btn auth__btn">
-                  Place in order
+                  Buyurtmani tasdiqlash
                 </button>
               </div>
             </Col>

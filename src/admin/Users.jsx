@@ -11,7 +11,7 @@ const Users = () => {
 
   const deleteUser = async (id) => {
     await deleteDoc(doc(db, "users", id));
-    toast.success("User deleted!");
+    toast.success("Foydalanuvchi o'chirildi!");
   };
 
   return (
@@ -22,38 +22,40 @@ const Users = () => {
         ) : (
           <Row>
             <Col lg="12">
-              <h4 className="text-center fw-bold">Users</h4>
+              <h4 className="text-center fw-bold">Foydalanuvchilar</h4>
             </Col>
             <Col lg="12" className="pt-5">
-              <table className="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Image</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {usersData?.map((user) => (
-                    <tr key={user.id}>
-                      <td>
-                        <img src={user.photoURL} alt="User photo" />
-                      </td>
-                      <td>{user.displayName}</td>
-                      <td>{user.email}</td>
-                      <td>
-                        <button
-                          onClick={() => deleteUser(user.id)}
-                          className="btn btn-danger"
-                        >
-                          Delete
-                        </button>
-                      </td>
+              <div className="table-responsive">
+                <table className="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Rasm</th>
+                      <th>Ism</th>
+                      <th>Email</th>
+                      <th>Harakat</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {usersData?.map((user) => (
+                      <tr key={user.id}>
+                        <td>
+                          <img src={user.photoURL} alt="User photo" />
+                        </td>
+                        <td>{user.displayName}</td>
+                        <td>{user.email}</td>
+                        <td>
+                          <button
+                            onClick={() => deleteUser(user.id)}
+                            className="btn btn-danger"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </Col>
           </Row>
         )}

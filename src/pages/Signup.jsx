@@ -56,12 +56,12 @@ const Signup = () => {
 
       // console.log(user);
       setLoading(false);
-      toast.success("Account created");
+      toast.success("Akkount yaratildi");
       navigate("/login");
     } catch (error) {
       console.log(error);
       setLoading(false);
-      toast.error("something went wrong!");
+      toast.error("Nimadir noto'g'ri bajarildi");
     }
   };
 
@@ -83,7 +83,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      placeholder="Ismingizni kiriting"
+                      placeholder="Ism kiriting"
                     />
                   </FormGroup>
 
@@ -93,7 +93,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Emailingizni kiriting"
+                      placeholder="Email kiriting"
                     />
                   </FormGroup>
 
@@ -103,7 +103,7 @@ const Signup = () => {
                       className="signup__form--input"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Parolingizni kiriting"
+                      placeholder="Parol kiriting"
                     />
                   </FormGroup>
 
