@@ -42,6 +42,7 @@
     @include center();
     column-gap: 2.7rem;
     margin-bottom: 0;
+    position: relative;
 
     @include responsive(sm) {
       position: absolute;
@@ -52,6 +53,21 @@
       background: $white-color;
       z-index: 10000;
       @include flex(column, nowrap, center, center);
+    }
+
+    &--close {
+      display: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $primary-color;
+
+      @include responsive(sm) {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 3px;
+        left: 20px;
+      }
     }
   }
 
@@ -126,8 +142,8 @@
     &__actions {
       position: absolute;
       top: 97%;
-      left: -350%;
-      width: 164px;
+      left: -430%;
+      width: 166px;
       z-index: 10;
       padding: 10px;
       @include flex(column, nowrap, flex-start, center);
@@ -179,7 +195,7 @@
     @include responsive(sm) {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       height: 100%;
       width: 100%;
       background: #1c1b1b67;

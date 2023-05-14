@@ -11,9 +11,9 @@ import useGetData from "../hooks/useGetData";
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
-  const [mobileProducts, setMobileProducts] = useState([]);
-  const [wirelessProducts, setWirelessProducts] = useState([]);
+  const [bedroomProducts, setBedroomProducts] = useState([]);
   const [popularProducts, setPopularProducts] = useState([]);
+  // const [wirelessProducts, setWirelessProducts] = useState([]);
   const year = new Date().getFullYear();
   const { data: products, loading } = useGetData("products");
   // console.log(products);
@@ -27,22 +27,22 @@ const Home = () => {
       (product) => product.category === "sofa"
     );
 
-    const filteredMobileProducts = products.filter(
-      (product) => product.category === "mobile"
+    const filteredBedroomProducts = products.filter(
+      (product) => product.category === "bedroom"
     );
 
-    const filteredWirelessProducts = products.filter(
-      (product) => product.category === "wireless"
-    );
+    // const filteredWirelessProducts = products.filter(
+    //   (product) => product.category === "wireless"
+    // );
 
     const filteredPopularProducts = products.filter(
-      (product) => product.category === "watch"
+      (product) => product.category === "kreslo"
     );
 
     setBestSalesProducts(filteredBestSalesProducts);
     setTrendingProducts(filteredTrendingProducts);
-    setMobileProducts(filteredMobileProducts);
-    setWirelessProducts(filteredWirelessProducts);
+    setBedroomProducts(filteredBedroomProducts);
+    // setWirelessProducts(filteredWirelessProducts);
     setPopularProducts(filteredPopularProducts);
   }, [products]);
 
@@ -154,8 +154,8 @@ const Home = () => {
                     Yangi kelgan mahsulotlar
                   </h2>
                 </Col>
-                <ProductList data={mobileProducts} />
-                <ProductList data={wirelessProducts} />
+                <ProductList data={bedroomProducts} />
+                {/* <ProductList data={wirelessProducts} /> */}
               </Row>
             </Container>
           </section>

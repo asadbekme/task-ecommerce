@@ -24,7 +24,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   // const product = products.find((product) => product.id === id);
   const { data: products, loading } = useGetData("products");
-  console.log(loading);
+  // console.log(loading);
   const docRef = doc(db, "products", id);
 
   useEffect(() => {

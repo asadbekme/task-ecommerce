@@ -5,12 +5,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCoG9yrOxP5Y429UXh76YrMeyVq3YXv1NE",
-  authDomain: "ecommerce-task-de74f.firebaseapp.com",
-  projectId: "ecommerce-task-de74f",
-  storageBucket: "ecommerce-task-de74f.appspot.com",
-  messagingSenderId: "681666032316",
-  appId: "1:681666032316:web:d24dcbdeffabd8e7c356b9",
+  apiKey: "AIzaSyDoUlMYXKuuK2Nq4N58G2YiBlRcSEto-lQ",
+  authDomain: "mebel-shop-88c44.firebaseapp.com",
+  projectId: "mebel-shop-88c44",
+  storageBucket: "mebel-shop-88c44.appspot.com",
+  messagingSenderId: "371539039169",
+  appId: "1:371539039169:web:be488986238b9254599540"
 };
 
 // Initialize Firebase

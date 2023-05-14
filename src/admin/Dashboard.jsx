@@ -17,13 +17,13 @@ const Dashboard = () => {
             <Col className="lg-3">
               <div className="revenue__box">
                 <h5 className="box__title">Jami sotuvlar</h5>
-                <span className="box__value">$7890</span>
+                <span className="box__value">$789</span>
               </div>
             </Col>
             <Col className="lg-3">
               <div className="orders__box">
                 <h5 className="box__title">Buyurtmalar</h5>
-                <span className="box__value">789</span>
+                <span className="box__value">77</span>
               </div>
             </Col>
             <Col className="lg-3">

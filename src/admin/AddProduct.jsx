@@ -88,10 +88,10 @@ const AddProduct = () => {
               </h4>
               <Form onSubmit={addProductHandler}>
                 <FormGroup className="form__group">
-                  <span>Mahsulot sarlavhasi</span>
+                  <span>Mahsulot nomi</span>
                   <input
                     type="text"
-                    placeholder="Product Name"
+                    placeholder="Mahsulot nomini kiriting"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     required
@@ -101,7 +101,7 @@ const AddProduct = () => {
                   <span>Qisqacha Tasnif</span>
                   <input
                     type="text"
-                    placeholder="Lorem..."
+                    placeholder="Mahsulot qisqacha tasnifini kiriting..."
                     value={shortDesc}
                     onChange={(e) => setShortDesc(e.target.value)}
                     required
@@ -111,7 +111,7 @@ const AddProduct = () => {
                   <span>Tavsif</span>
                   <textarea
                     rows="5"
-                    placeholder="Description"
+                    placeholder="Mahsulot tasnifini kiriting..."
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     required
@@ -123,7 +123,7 @@ const AddProduct = () => {
                     <span>Narx</span>
                     <input
                       type="number"
-                      placeholder="$100"
+                      placeholder="Mahsulot narxini kiriting($100)"
                       value={price}
                       onChange={(e) => setPrice(e.target.value)}
                       required
@@ -138,12 +138,12 @@ const AddProduct = () => {
                       onChange={(e) => setCategory(e.target.value)}
                       required
                     >
-                      <option>Select category</option>
-                      <option value="chair">Chair</option>
-                      <option value="sofa">Sofa</option>
-                      <option value="mobile">Mobile</option>
-                      <option value="watch">Watch</option>
-                      <option value="wireless">Wireless</option>
+                      <option>Kategoriyani tanlang</option>
+                      <option value="stul">Stul</option>
+                      <option value="divan">Divan</option>
+                      <option value="krovat">Krovat</option>
+                      <option value="kreslo">Kreslo</option>
+                      <option value="other">Boshqa</option>
                     </select>
                   </FormGroup>
                 </div>

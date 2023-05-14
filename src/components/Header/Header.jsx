@@ -51,6 +51,8 @@ const Header = () => {
 
   const menuToggle = () => menuRef.current.classList.toggle("menu__active");
 
+  const closeHandler = () => menuRef.current.classList.remove("menu__active");
+
   const navigateToCart = () => {
     navigate("/cart");
   };
@@ -89,6 +91,11 @@ const Header = () => {
                     </NavLink>
                   </li>
                 ))}
+                <div className="header__menu--close">
+                  <span onClick={closeHandler}>
+                    <i class="ri-close-fill"></i>
+                  </span>
+                </div>
               </ul>
             </div>
 

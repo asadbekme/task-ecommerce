@@ -22,19 +22,19 @@ const Footer = () => {
               <h4 className="footer__links--title">Eng yaxshi kategoriyalar</h4>
               <ListGroup>
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="#">Mobile Phones</Link>
+                  <Link to="#">Trendagi mahsulotlar</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="#">Modern Sofa</Link>
+                  <Link to="#">Divanlar</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="#">Arm Chair</Link>
+                  <Link to="#">Stullar</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="footer__links--item ps-0 border-0">
-                  <Link to="#">Smart Watches</Link>
+                  <Link to="#">Krovatlar</Link>
                 </ListGroupItem>
               </ListGroup>
             </div>
@@ -91,7 +91,7 @@ const Footer = () => {
 
           <Col lg="12">
             <p className="footer__copyright">
-              Mualliflik huquqi © {year} Asadbek Rakhimov ishlab chiqilgan.
+              Mualliflik huquqi. © {year} <span className="fw-bold">Asadbek Rakhimov</span> tomonidan ishlab chiqilgan.
               Barcha huquqlar himoyalangan.
             </p>
           </Col>

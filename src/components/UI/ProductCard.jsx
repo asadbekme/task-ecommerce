@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { addProduct } from "../../slice/cart";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
       })
     );
 
-    toast.success("Product added successfully.");
+    toast.success("Mahsulot muvaffaqiyatli qo'shildi!");
   };
 
   return (
@@ -33,6 +33,9 @@ const ProductCard = ({ product }) => {
               src={product.imgUrl}
               alt="Product image"
             />
+            <motion.span whileHover={{ scale: 1.1 }} className="product__wish">
+              <FaHeart />
+            </motion.span>
           </div>
         </Link>
         <div className="product__info">
