@@ -7,9 +7,11 @@
 
 ### 2. Clone qilingan folder'ga kirib, command prompt'da `npm install` komandasini kiritasiz.
 
-### 3. node_modules folder muvaffaqiyatli o'rnatilgan keyin, project'ni biror bir code editor'ida(masalan, VS Code) ochasiz.
+### 3. node_modules papka muvaffaqiyatli o'rnatilgan keyin, project'ni biror bir code editor'ida(masalan, VS Code) ochasiz.
 
 ### 4. Keyin, command prompt'da `npm run start` komandasini kiritasiz.
+
+### 5. Keyin, browser'da `http://localhost:3000/` port'ni ochasiz.
 
 
 
