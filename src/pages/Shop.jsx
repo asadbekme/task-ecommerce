@@ -9,6 +9,8 @@ const Shop = () => {
   const { data: products, loading } = useGetData("products");
   const [productsData, setProductsData] = useState([]);
 
+  console.log(products);
+
   useEffect(() => {
     if (!loading) {
       setProductsData(products);
@@ -17,7 +19,7 @@ const Shop = () => {
 
   const handleFilter = (e) => {
     const filterValue = e.target.value;
-    if (filterValue === "all") {
+    if (filterValue === "barcha") {
       setProductsData(products);
     }
 
@@ -28,9 +30,9 @@ const Shop = () => {
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === "mobile") {
+    if (filterValue === "kreslo") {
       const filteredProducts = products.filter(
-        (product) => product.category === "mobile"
+        (product) => product.category === "kreslo"
       );
       setProductsData(filteredProducts);
     }
@@ -42,16 +44,16 @@ const Shop = () => {
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === "watch") {
+    if (filterValue === "bedroom") {
       const filteredProducts = products.filter(
-        (product) => product.category === "watch"
+        (product) => product.category === "bedroom"
       );
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === "wireless") {
+    if (filterValue === "other") {
       const filteredProducts = products.filter(
-        (product) => product.category === "wireless"
+        (product) => product.category === "other"
       );
       setProductsData(filteredProducts);
     }
@@ -94,12 +96,12 @@ const Shop = () => {
                   <div className="shop__filter--widget">
                     <select onChange={handleFilter}>
                       <option>Kategoriya bo'yicha filtrlash</option>
-                      <option value="all">All</option>
-                      <option value="sofa">Sofa</option>
-                      <option value="mobile">Mobile</option>
-                      <option value="chair">Chair</option>
-                      <option value="watch">Watch</option>
-                      <option value="wireless">Wireless</option>
+                      <option value="barcha">Barchasi</option>
+                      <option value="sofa">Divan</option>
+                      <option value="chair">Stul</option>
+                      <option value="kreslo">Kreslo</option>
+                      <option value="bedroom">Krovat</option>
+                      <option value="other">Boshqa</option>
                     </select>
                   </div>
                 </Col>

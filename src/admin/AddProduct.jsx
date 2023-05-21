@@ -139,9 +139,9 @@ const AddProduct = () => {
                       required
                     >
                       <option>Kategoriyani tanlang</option>
-                      <option value="stul">Stul</option>
-                      <option value="divan">Divan</option>
-                      <option value="krovat">Krovat</option>
+                      <option value="chair">Stul</option>
+                      <option value="sofa">Divan</option>
+                      <option value="bedroom">Krovat</option>
                       <option value="kreslo">Kreslo</option>
                       <option value="other">Boshqa</option>
                     </select>
